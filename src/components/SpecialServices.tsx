@@ -987,24 +987,37 @@ const OurFeaturedSection = () => {
               <div className="flex-shrink-0 text-3xl">💎</div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-blue-300 mb-3">
-                  ChatGPT Plus Required for Full Access
+                  Free GPT-5 Tools • Upgrade for Unlimited Access
                 </h3>
                 <div className="space-y-2 text-sm text-gray-300">
                   <p>
-                    <strong className="text-blue-400">100% FREE & UNRESTRICTED ACCESS</strong> to all our custom GPT tools requires a <strong>ChatGPT Plus subscription</strong> (~$20/month).
+                    Our custom GPTs use <strong className="text-blue-400">GPT-5 capabilities</strong> and are <strong className="text-green-400">100% FREE</strong>, 
+                    but the free ChatGPT version has <strong>rate limits</strong> (limited messages every few hours).
                   </p>
                   <p>
-                    <strong className="text-green-400">⚠️ IMPORTANT:</strong> This is an <strong>OpenAI requirement</strong>, not a fee imposed by CCSBA or AIWebTools.AI. 
-                    We provide these tools completely free—OpenAI requires Plus membership to access custom GPTs.
+                    For <strong className="text-blue-400">UNLIMITED ACCESS</strong>, upgrade to <strong>ChatGPT Plus</strong> (~$20/month).
+                  </p>
+                  <p>
+                    <strong className="text-green-400">⚠️ IMPORTANT:</strong> This is an <strong>OpenAI policy</strong>, not imposed by CCSBA or AIWebTools.AI. 
+                    All our tools are free—OpenAI sets the usage limits.
                   </p>
                   <div className="bg-black/30 rounded-lg p-3 border border-blue-400/30 mt-3">
-                    <p className="text-xs text-gray-400 mb-1">With ChatGPT Plus:</p>
-                    <ul className="text-xs text-gray-300 space-y-1">
-                      <li>✅ Full access to all 1500+ custom GPT tools</li>
-                      <li>✅ Unlimited AI-powered business assistance</li>
-                      <li>✅ Latest GPT-4 technology & capabilities</li>
-                      <li>✅ Priority support during peak usage</li>
-                    </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <div>
+                        <p className="text-xs text-gray-400 mb-1 font-semibold">Free ChatGPT:</p>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>✅ GPT-5 powered</li>
+                          <li>⏱️ Rate limited</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="text-xs text-blue-400 mb-1 font-semibold">Plus (~$20/mo):</p>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>✅ Same GPT-5 power</li>
+                          <li>✅ UNLIMITED use</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

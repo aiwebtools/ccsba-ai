@@ -15,25 +15,42 @@ const ChatGPTPlusNotice = () => {
         </div>
         <div className="flex-1">
           <h3 className="text-xl font-bold text-blue-300 mb-3 flex items-center gap-2">
-            <span>💎 ChatGPT Plus Required for Custom GPTs</span>
+            <span>💎 ChatGPT Plus for Unlimited Access to Custom GPTs</span>
           </h3>
           <div className="space-y-3 text-gray-300">
             <p className="text-sm leading-relaxed">
-              <strong className="text-blue-400">100% FREE & UNRESTRICTED ACCESS</strong> to all our custom-designed GPT tools 
-              requires a <strong>ChatGPT Plus subscription</strong> (approximately $20/month).
+              Our custom GPTs are powered by <strong className="text-blue-400">GPT-5 capabilities</strong> and are <strong className="text-green-400">100% FREE to use</strong>, 
+              but the free version has <strong>rate limits</strong> (limited messages every few hours).
             </p>
             <p className="text-sm leading-relaxed">
-              <strong className="text-green-400">⚠️ IMPORTANT:</strong> This is an <strong>OpenAI requirement</strong>, 
-              not a fee imposed by CCSBA or AIWebTools.AI. We provide the tools for free—OpenAI requires Plus membership to use custom GPTs.
+              For <strong className="text-blue-400">UNLIMITED ACCESS</strong> without rate limits, you'll need 
+              a <strong>ChatGPT Plus subscription</strong> (~$20/month).
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong className="text-green-400">⚠️ IMPORTANT:</strong> This is an <strong>OpenAI policy</strong>, 
+              not a fee imposed by CCSBA or AIWebTools.AI. All our tools are completely free—OpenAI sets the usage limits.
             </p>
             <div className="bg-black/30 rounded-lg p-4 border border-blue-400/30">
-              <p className="text-xs text-gray-400 mb-2">With ChatGPT Plus, you get:</p>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>✅ Full access to all 1500+ CCSBA custom GPT tools</li>
-                <li>✅ Unlimited conversations with specialized AI assistants</li>
-                <li>✅ Priority access during high-demand periods</li>
-                <li>✅ Latest GPT-4 model capabilities</li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <p className="text-gray-400 mb-2 font-semibold">Free ChatGPT:</p>
+                  <ul className="text-gray-300 space-y-1">
+                    <li>✅ GPT-5 capabilities</li>
+                    <li>✅ Access to custom GPTs</li>
+                    <li>⏱️ Rate limited (few messages/hours)</li>
+                    <li>⏸️ May have wait times</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-blue-400 mb-2 font-semibold">ChatGPT Plus (~$20/mo):</p>
+                  <ul className="text-gray-300 space-y-1">
+                    <li>✅ Same GPT-5 power</li>
+                    <li>✅ UNLIMITED messages</li>
+                    <li>✅ No rate limits or waits</li>
+                    <li>✅ Priority access</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <button
               onClick={handleChatGPTLink}
