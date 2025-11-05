@@ -29,7 +29,7 @@ const Logo = ({ compact = false }: { compact?: boolean }) => {
       <div className="text-left flex-1">
         <div className={`flex items-center gap-2 ${compact ? 'mb-0' : 'mb-1'}`}>
           <div className={`font-bold ${compact ? 'text-base' : 'text-xl'} tracking-wider letter-spacing-wide relative`}>
-            <span className="relative z-10 bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent logo-text-crisp">AI WEB TOOLS - AITOOLS.STUDIO</span>
+            <span className="relative z-10 bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent logo-text-crisp">CCSBA AI TOOLS FOR MEMBERS</span>
           </div>
           {!compact && (
             <span className="text-xs text-cyan-200/80 font-medium hidden sm:block tracking-wide">
