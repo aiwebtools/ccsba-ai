@@ -4,6 +4,9 @@ import FooterActions from "./footer/FooterActions";
 import FooterCompanyInfo from "./footer/FooterCompanyInfo";
 import FooterLinks from "./footer/FooterLinks";
 import FooterBottom from "./footer/FooterBottom";
+import FooterCannabisTools from "./footer/FooterCannabisTools";
+import FooterTestimonials from "./footer/FooterTestimonials";
+import FooterResources from "./footer/FooterResources";
 
 const Footer = () => {
   const handleRequestTool = () => {
@@ -109,7 +112,7 @@ Best regards,
   };
 
   return (
-    <footer className="bg-black text-cyan-100 py-16 border-t border-cyan-500/30">
+    <footer className="bg-gradient-to-b from-black via-green-950/20 to-black text-gray-100 py-16 border-t border-green-500/30">
       <div className="container mx-auto px-4">
         <FooterActions 
           handleExternalLink={handleExternalLink}
@@ -140,12 +143,28 @@ Best regards,
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <FooterCompanyInfo />
+          <FooterCannabisTools />
+          <FooterResources />
+        </div>
+        
+        <Separator className="bg-green-500/30 mb-8" />
+        
+        {/* Testimonials Section */}
+        <div className="mb-12">
+          <FooterTestimonials />
+        </div>
+        
+        <Separator className="bg-green-500/30 mb-8" />
+        
+        {/* Additional Links */}
+        <div className="mb-12">
           <FooterLinks />
         </div>
         
-        <Separator className="bg-cyan-500/30 mb-8" />
+        <Separator className="bg-green-500/30 mb-8" />
         
         <FooterBottom handleExternalLink={handleExternalLink} />
       </div>
