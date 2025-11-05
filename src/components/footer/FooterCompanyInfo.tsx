@@ -77,9 +77,17 @@ const FooterCompanyInfo = () => {
           <p className="mb-2">
             We empower the community with cutting-edge AI tools for every aspect of your business—from consumers to small business owners to industry leaders.
           </p>
-          <p className="text-green-300 font-semibold">
+          <p className="text-green-300 font-semibold mb-3">
             🤝 Together We Grow • United We Stand • Empowering Our Community
           </p>
+          <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mt-3">
+            <p className="text-xs text-blue-300 font-semibold mb-1">💎 ChatGPT Plus Required</p>
+            <p className="text-xs text-gray-400">
+              Full access to our custom GPTs requires ChatGPT Plus (~$20/month). 
+              This is an <strong className="text-blue-400">OpenAI requirement</strong>, not imposed by CCSBA. 
+              All tools remain 100% free for members with Plus.
+            </p>
+          </div>
         </div>
       </div>
     </div>

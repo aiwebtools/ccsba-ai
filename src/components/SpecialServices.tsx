@@ -980,6 +980,38 @@ const OurFeaturedSection = () => {
           </div>
         </div>
 
+        {/* ChatGPT Plus Notice */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/50 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 text-3xl">💎</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-blue-300 mb-3">
+                  ChatGPT Plus Required for Full Access
+                </h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <p>
+                    <strong className="text-blue-400">100% FREE & UNRESTRICTED ACCESS</strong> to all our custom GPT tools requires a <strong>ChatGPT Plus subscription</strong> (~$20/month).
+                  </p>
+                  <p>
+                    <strong className="text-green-400">⚠️ IMPORTANT:</strong> This is an <strong>OpenAI requirement</strong>, not a fee imposed by CCSBA or AIWebTools.AI. 
+                    We provide these tools completely free—OpenAI requires Plus membership to access custom GPTs.
+                  </p>
+                  <div className="bg-black/30 rounded-lg p-3 border border-blue-400/30 mt-3">
+                    <p className="text-xs text-gray-400 mb-1">With ChatGPT Plus:</p>
+                    <ul className="text-xs text-gray-300 space-y-1">
+                      <li>✅ Full access to all 1500+ custom GPT tools</li>
+                      <li>✅ Unlimited AI-powered business assistance</li>
+                      <li>✅ Latest GPT-4 technology & capabilities</li>
+                      <li>✅ Priority support during peak usage</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Web3 Section */}
         <div className="mb-16">
           <div className="text-center mb-8">

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import GlobalSearchBar from "./GlobalSearchBar";
 import { getCurrentToolCount } from "@/utils/toolCounter";
 import MeetingCountdown from "./MeetingCountdown";
+import ChatGPTPlusNotice from "./ChatGPTPlusNotice";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -164,8 +165,13 @@ const HeroSection = () => {
           </p>
         </div>
 
+        {/* ChatGPT Plus Notice */}
+        <div className="mt-8 max-w-4xl mx-auto">
+          <ChatGPTPlusNotice />
+        </div>
+
         {/* Meeting Countdown */}
-        <div className="mt-12 max-w-2xl mx-auto">
+        <div className="mt-8 max-w-2xl mx-auto">
           <MeetingCountdown />
         </div>
 
