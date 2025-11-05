@@ -31,14 +31,21 @@ const SEOHead = ({
   category,
   toolData
 }: SEOHeadProps) => {
-  const fullTitle = title ? `${title} | AIWEBTOOLS.AI - #1 AI WEB TOOLS Directory 2025` : "AIWEBTOOLS.AI - #1 AI WEB TOOLS Directory | 1000+ Best AI Tools 2025 | Better Than Toolify | Comprehensive AI Tools";
+  const fullTitle = title ? `${title} | CCSBA AI Tools Portal for Members` : "CCSBA AI Tools Portal | Connecticut Cannabis Small Business Alliance | AI-Powered Business Growth Tools";
   const canonical = url.startsWith('http') ? url : `${seoConfig.siteUrl}${url}`;
   const fullImage = image.startsWith('http') ? image : `${seoConfig.siteUrl}${image}`;
 
-  // ULTRA-COMPREHENSIVE SEO KEYWORDS - DOMINATE ALL AI SEARCHES
+  // ULTRA-COMPREHENSIVE SEO KEYWORDS - CCSBA & Cannabis Industry Focus
   const competitiveKeywords = [
+    "CCSBA",
+    "Connecticut Cannabis Small Business Alliance",
+    "CCSBA AI tools",
+    "cannabis business tools",
+    "cannabis AI tools",
+    "Connecticut cannabis",
+    "cannabis small business",
     "aiwebtools.ai",
-    "AIWEBTOOLS.AI", 
+    "AIWEBTOOLS.AI",
     "aiwebtools",
     "AIWEBTOOLS",
     "aitoolwebsites.com",
@@ -198,41 +205,41 @@ const SEOHead = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={competitiveKeywords.join(', ')} />
-      <meta name="author" content="AI WEB TOOLS LLC" />
+      <meta name="author" content="Connecticut Cannabis Small Business Alliance (CCSBA)" />
       <link rel="canonical" href={canonical} />
       
-      {/* ENHANCED COMPETITIVE META TAGS FOR #1 RANKING */}
-      <meta name="application-name" content="AIWEBTOOLS.AI" />
-      <meta name="subject" content="AIWEBTOOLS.AI - #1 AI WEB TOOLS Directory 2025" />
-      <meta name="topic" content="aiwebtools.ai, ai web tools, AIWEBTOOLS, AI WEB TOOLS, best ai tools 2025, artificial intelligence, ChatGPT alternatives, comprehensive ai directory, better than toolify" />
-      <meta name="summary" content="AIWEBTOOLS.AI - The #1 comprehensive AI web tools directory with 1000+ curated AI tools. Better than Toolify. Discover the best AI tools 2025 for business, creativity, and productivity." />
-      <meta name="classification" content="Technology, AI Tools, Software Directory" />
-      <meta name="designer" content="AI WEB TOOLS LLC" />
-      <meta name="owner" content="AI WEB TOOLS LLC" />
+      {/* ENHANCED COMPETITIVE META TAGS FOR CCSBA CANNABIS INDUSTRY */}
+      <meta name="application-name" content="CCSBA AI Tools Portal" />
+      <meta name="subject" content="CCSBA AI Tools Portal - Connecticut Cannabis Small Business Alliance Member Resources" />
+      <meta name="topic" content="CCSBA, Connecticut cannabis, cannabis AI tools, cannabis business tools, hemp, marijuana, dispensary tools, cultivation tools" />
+      <meta name="summary" content="CCSBA AI Tools Portal - Connecticut Cannabis Small Business Alliance non-profit educational organization providing AI-powered tools to empower cannabis businesses from consumers to industry leaders. Together we grow." />
+      <meta name="classification" content="Cannabis Industry, AI Tools, Business Resources, Non-Profit Education" />
+      <meta name="designer" content="AIWebTools.AI for CCSBA" />
+      <meta name="owner" content="Connecticut Cannabis Small Business Alliance" />
       <meta name="directory" content="submission" />
       <meta name="pagename" content={fullTitle} />
-      <meta name="category" content="AIWEBTOOLS.AI - AI WEB TOOLS Directory" />
-      <meta name="coverage" content="Worldwide" />
-      <meta name="distribution" content="Global" />
+      <meta name="category" content="CCSBA - Cannabis Business AI Tools Directory" />
+      <meta name="coverage" content="Connecticut, United States" />
+      <meta name="distribution" content="Connecticut Cannabis Industry" />
       <meta name="rating" content="General" />
       <meta name="revisit-after" content="1 days" />
       <meta name="target" content="all" />
-      <meta name="audience" content="Business Professionals, Content Creators, Developers, Entrepreneurs, Students" />
+      <meta name="audience" content="Cannabis Business Owners, Dispensary Operators, Cultivators, Consumers, Industry Professionals" />
       <meta name="language" content="English" />
-      <meta name="doc-type" content="AIWEBTOOLS.AI - AI WEB TOOLS Directory" />
-      <meta name="doc-rights" content="AI WEB TOOLS LLC" />
+      <meta name="doc-type" content="CCSBA - Cannabis Business AI Tools Portal" />
+      <meta name="doc-rights" content="Connecticut Cannabis Small Business Alliance" />
       <meta name="doc-class" content="Living Document" />
       
-      {/* CRITICAL BRAND AND COMPETITIVE EDGE META TAGS */}
-      <meta name="brand" content="AIWEBTOOLS.AI" />
-      <meta name="company" content="AI WEB TOOLS LLC" />
-      <meta name="expertise" content="AI WEB TOOLS Curation, AIWEBTOOLS.AI Platform, AI Tools Recommendations, Technology Reviews" />
-      <meta name="specialty" content="AIWEBTOOLS.AI - Artificial Intelligence WEB TOOLS Directory" />
-      <meta name="focus" content="aiwebtools.ai, ai web tools, best AI tools 2025, ChatGPT alternatives, professional AI solutions, better than toolify" />
-      <meta name="competitive-advantage" content="AIWEBTOOLS.AI - Most comprehensive AI WEB TOOLS directory, better than Toolify, 1000+ verified tools, #1 ranking" />
-      <meta name="unique-value" content="AIWEBTOOLS.AI offers 1000+ curated AI WEB TOOLS with detailed reviews, ratings, and direct access links" />
-      <meta name="primary-keywords" content="aiwebtools.ai, ai web tools, AIWEBTOOLS, AI WEB TOOLS" />
-      <meta name="target-ranking" content="#1 for aiwebtools.ai and ai web tools keywords" />
+      {/* CRITICAL BRAND AND CANNABIS INDUSTRY META TAGS */}
+      <meta name="brand" content="CCSBA AI Tools Portal" />
+      <meta name="company" content="Connecticut Cannabis Small Business Alliance" />
+      <meta name="expertise" content="Cannabis Business Tools, Cannabis Industry AI, Business Growth, Community Empowerment" />
+      <meta name="specialty" content="Connecticut Cannabis Small Business Support and AI-Powered Business Tools" />
+      <meta name="focus" content="CCSBA, Connecticut cannabis, cannabis business tools, cannabis AI, hemp industry, marijuana business" />
+      <meta name="competitive-advantage" content="Non-profit educational organization dedicated to cannabis business empowerment through AI technology" />
+      <meta name="unique-value" content="CCSBA offers comprehensive AI tools specifically curated for Connecticut cannabis businesses - from consumers to small business owners to industry leaders" />
+      <meta name="primary-keywords" content="CCSBA, Connecticut cannabis, cannabis business tools, cannabis AI tools" />
+      <meta name="target-ranking" content="#1 for CCSBA and Connecticut cannabis business tools keywords" />
       
       {/* Technical Performance Meta */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
@@ -245,24 +252,23 @@ const SEOHead = ({
       <meta name="apple-touch-fullscreen" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="AI WEB TOOLS" />
+      <meta name="apple-mobile-web-app-title" content="CCSBA AI Tools" />
       
       {/* Geographic and Business Meta */}
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
-      <meta name="ICBM" content="40.7128, -74.0060" />
-      <meta name="geo.position" content="40.7128;-74.0060" />
-      <meta name="nuts" content="US" />
+      <meta name="geo.region" content="US-CT" />
+      <meta name="geo.placename" content="Connecticut, United States" />
+      <meta name="ICBM" content="41.6032, -73.0877" />
+      <meta name="geo.position" content="41.6032;-73.0877" />
+      <meta name="nuts" content="US-CT" />
       
       {/* Business Contact Data */}
-      <meta name="business.contact_data.street_address" content="Remote Operations Worldwide" />
-      <meta name="business.contact_data.locality" content="Global" />
-      <meta name="business.contact_data.region" content="Worldwide" />
-      <meta name="business.contact_data.postal_code" content="00000" />
+      <meta name="business.contact_data.street_address" content="Connecticut" />
+      <meta name="business.contact_data.locality" content="Connecticut" />
+      <meta name="business.contact_data.region" content="Connecticut" />
+      <meta name="business.contact_data.postal_code" content="06000" />
       <meta name="business.contact_data.country_name" content="United States" />
-      <meta name="business.contact_data.email" content="Contact@ai-webtools.com" />
-      <meta name="business.contact_data.phone_number" content="+14758008096" />
-      <meta name="business.contact_data.website" content={seoConfig.siteUrl} />
+      <meta name="business.contact_data.email" content="info@connecticutcannabis.org" />
+      <meta name="business.contact_data.website" content="https://connecticutcannabis.org" />
       
       {/* Enhanced Crawling Instructions */}
       {noIndex ? (
@@ -289,48 +295,46 @@ const SEOHead = ({
         </>
       )}
       
-      {/* OPTIMIZED SOCIAL MEDIA META TAGS FOR AI WEB TOOLS */}
-      <meta property="og:title" content="🤖 AI WEB TOOLS - #1 AI Tools Directory | 1000+ Best AI Tools 2025 | Better Than Toolify" />
-      <meta property="og:description" content="🚀 Discover 1000+ verified AI tools, agents & ChatGPT alternatives. Expert-curated directory trusted by 100K+ professionals. Better than Toolify & competitors. Find the perfect AI solution for your needs!" />
-      <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-futuristic-ai-robot-with-glowing-blue-eyes-su.png" />
+      {/* OPTIMIZED SOCIAL MEDIA META TAGS FOR CCSBA */}
+      <meta property="og:title" content="🌿 CCSBA AI Tools Portal - Connecticut Cannabis Small Business Alliance Member Resources" />
+      <meta property="og:description" content="🚀 AI-powered tools for Connecticut cannabis businesses. Non-profit educational organization empowering consumers to industry leaders. Together we grow, united we stand." />
+      <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-professional-cannabis-leaf-logo-icon-in-brigh.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="AI WEB TOOLS - The Ultimate AI Tools Directory with 1000+ Curated AI Applications" />
+      <meta property="og:image:alt" content="CCSBA AI Tools Portal - Connecticut Cannabis Small Business Alliance" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:secure_url" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-futuristic-ai-robot-with-glowing-blue-eyes-su.png" />
+      <meta property="og:image:secure_url" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-professional-cannabis-leaf-logo-icon-in-brigh.png" />
       <meta property="og:url" content={canonical} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="AI WEB TOOLS - Best AI Tools Directory" />
+      <meta property="og:site_name" content="CCSBA AI Tools Portal - Connecticut Cannabis Small Business Alliance" />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:locale:alternate" content="en_GB" />
       <meta property="og:determiner" content="the" />
       <meta property="og:updated_time" content={new Date().toISOString()} />
-      <meta property="og:see_also" content="https://aitools.company" />
+      <meta property="og:see_also" content="https://connecticutcannabis.org" />
       <meta property="og:see_also" content="https://www.aiwebtools.ai" />
-      <meta property="og:see_also" content="https://AItoolwebsites.com" />
       <meta property="fb:app_id" content={seoConfig.facebookAppId} />
       
-      {/* OPTIMIZED TWITTER CARD FOR AI WEB TOOLS */}
+      {/* OPTIMIZED TWITTER CARD FOR CCSBA */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="🤖 AI WEB TOOLS - #1 AI Tools Directory | 1000+ Best AI Tools 2025" />
-      <meta name="twitter:description" content="🚀 Discover 1000+ verified AI tools & ChatGPT alternatives. Expert-curated directory better than Toolify. Trusted by 100K+ professionals worldwide!" />
-      <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-futuristic-ai-robot-with-glowing-blue-eyes-su.png" />
-      <meta name="twitter:image:alt" content="AI WEB TOOLS - Ultimate AI Tools Directory with 1000+ Curated AI Applications" />
-      <meta name="twitter:site" content={seoConfig.twitterHandle} />
-      <meta name="twitter:creator" content={seoConfig.twitterHandle} />
-      <meta name="twitter:domain" content="aitools.studio" />
+      <meta name="twitter:title" content="🌿 CCSBA AI Tools Portal - Cannabis Business Empowerment" />
+      <meta name="twitter:description" content="🚀 Connecticut Cannabis Small Business Alliance - Non-profit providing AI tools for cannabis businesses. From consumers to industry leaders, together we grow!" />
+      <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-professional-cannabis-leaf-logo-icon-in-brigh.png" />
+      <meta name="twitter:image:alt" content="CCSBA - Connecticut Cannabis Small Business Alliance AI Tools" />
+      <meta name="twitter:site" content="@CCBSACannabis" />
+      <meta name="twitter:creator" content="@CCBSACannabis" />
+      <meta name="twitter:domain" content="connecticutcannabis.org" />
       <meta name="twitter:url" content={canonical} />
-      <meta name="twitter:data1" content="1000+ AI Tools" />
-      <meta name="twitter:label1" content="Directory Size" />
-      <meta name="twitter:data2" content="Free & Premium" />
-      <meta name="twitter:label2" content="Pricing" />
+      <meta name="twitter:data1" content="Connecticut Cannabis" />
+      <meta name="twitter:label1" content="Industry" />
+      <meta name="twitter:data2" content="Non-Profit Educational" />
+      <meta name="twitter:label2" content="Organization Type" />
       
       {/* Article and Content Meta */}
-      <meta property="article:publisher" content="https://aitoolwebsites.com" />
-      <meta property="article:author" content="AI WEB TOOLS LLC" />
+      <meta property="article:publisher" content="https://connecticutcannabis.org" />
+      <meta property="article:author" content="Connecticut Cannabis Small Business Alliance" />
       <meta property="article:published_time" content="2024-01-01T00:00:00Z" />
       <meta property="article:modified_time" content={new Date().toISOString()} />
-      <meta property="article:section" content={category || "AI Tools Directory"} />
+      <meta property="article:section" content={category || "Cannabis Business Tools"} />
       <meta property="article:tag" content={competitiveKeywords.slice(0, 15).join(", ")} />
       
       {/* Mobile and PWA Optimization */}

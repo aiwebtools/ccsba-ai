@@ -1,11 +1,13 @@
 
 import React, { useEffect, useRef } from 'react';
+import cannabisLeaf from '@/assets/cannabis-leaf-logo.png';
 
 const AnimatedBackground = () => {
   const starsRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
   const shootingStarsRef = useRef<HTMLDivElement>(null);
   const matrixRef = useRef<HTMLDivElement>(null);
+  const cannabisLeavesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Create stars - optimized for performance
@@ -23,6 +25,38 @@ const AnimatedBackground = () => {
         star.style.animationDelay = Math.random() * 4 + 's';
         star.style.animationDuration = (Math.random() * 3 + 3) + 's';
         starsContainer.appendChild(star);
+      }
+    };
+
+    // Create floating cannabis leaves - NEW
+    const createCannabisLeaves = () => {
+      const leavesContainer = cannabisLeavesRef.current;
+      if (!leavesContainer) return;
+
+      const isMobile = window.innerWidth < 768;
+      const leafCount = isMobile ? 8 : 15;
+
+      for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement('div');
+        leaf.className = 'floating-cannabis-leaf';
+        
+        // Create image element
+        const img = document.createElement('img');
+        img.src = cannabisLeaf;
+        img.alt = '';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.opacity = '0.15';
+        img.style.filter = 'brightness(1.2)';
+        
+        leaf.appendChild(img);
+        leaf.style.left = Math.random() * 100 + '%';
+        leaf.style.width = (Math.random() * 40 + 30) + 'px';
+        leaf.style.height = (Math.random() * 40 + 30) + 'px';
+        leaf.style.animationDelay = Math.random() * 20 + 's';
+        leaf.style.animationDuration = (Math.random() * 25 + 35) + 's';
+        
+        leavesContainer.appendChild(leaf);
       }
     };
 
@@ -100,6 +134,10 @@ const AnimatedBackground = () => {
           matrixRef.current.innerHTML = '';
           createMatrixCode();
         }
+        if (cannabisLeavesRef.current) {
+          cannabisLeavesRef.current.innerHTML = '';
+          createCannabisLeaves();
+        }
       }, 250);
     };
 
@@ -107,6 +145,7 @@ const AnimatedBackground = () => {
     createParticles();
     createShootingStars();
     createMatrixCode();
+    createCannabisLeaves();
 
     window.addEventListener('resize', handleResize);
 
@@ -117,6 +156,7 @@ const AnimatedBackground = () => {
       if (particlesRef.current) particlesRef.current.innerHTML = '';
       if (shootingStarsRef.current) shootingStarsRef.current.innerHTML = '';
       if (matrixRef.current) matrixRef.current.innerHTML = '';
+      if (cannabisLeavesRef.current) cannabisLeavesRef.current.innerHTML = '';
     };
   }, []);
 
@@ -126,6 +166,7 @@ const AnimatedBackground = () => {
       <div ref={particlesRef} className="floating-particles" />
       <div ref={shootingStarsRef} className="shooting-stars-container" />
       <div ref={matrixRef} className="matrix-background" />
+      <div ref={cannabisLeavesRef} className="cannabis-leaves-container" />
     </>
   );
 };

@@ -192,7 +192,82 @@
   }
 }
 
+
 /* Remove heavy effects and unused animations */
 .comets-container {
   display: none;
+}
+
+/* Cannabis leaves floating animation */
+.cannabis-leaves-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  will-change: auto;
+}
+
+.floating-cannabis-leaf {
+  position: absolute;
+  top: -100px;
+  animation: floatLeaf 45s infinite linear;
+  will-change: transform;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.3));
+}
+
+@keyframes floatLeaf {
+  0% {
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(50vh) translateX(50px) rotate(180deg);
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(110vh) translateX(-30px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mobile optimizations for cannabis leaves */
+@media (max-width: 768px) {
+  .floating-cannabis-leaf {
+    opacity: 0.1;
+  }
+  
+  @keyframes floatLeaf {
+    0% {
+      transform: translateY(-100px) translateX(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.1;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateY(110vh) translateX(-20px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cannabis-leaves-container {
+    display: none;
+  }
 }

@@ -177,10 +177,17 @@ const DesktopMenu = () => {
                 </DropdownMenuItem>
                 
                 <DropdownMenuItem
-                  onClick={handleBrowseAITools}
-                  className="text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 font-bold rounded-xl p-6 text-xl shadow-xl shadow-cyan-500/30 border border-cyan-400/50 transition-all duration-200 col-span-1"
+                  onClick={(e) => { handleExternalLink("https://connecticutcannabis.org", e); }}
+                  className="text-green-100 hover:bg-green-500/20 rounded-lg h-16 text-lg font-medium px-4 col-span-1 border border-green-500/30"
                 >
-                  <span className="mr-3 text-2xl">🎯</span> Browse Categories
+                  <span className="mr-4 text-2xl">🌿</span> CCSBA Main Site
+                </DropdownMenuItem>
+                
+                <DropdownMenuItem
+                  onClick={handleBrowseAITools}
+                  className="text-center bg-gradient-to-r from-green-500 to-lime-600 text-white hover:from-green-600 hover:to-lime-700 font-bold rounded-xl p-6 text-xl shadow-xl shadow-green-500/30 border border-green-400/50 transition-all duration-200 col-span-2"
+                >
+                  <span className="mr-3 text-2xl">🎯</span> Browse AI Tools Categories
                 </DropdownMenuItem>
               </div>
               
