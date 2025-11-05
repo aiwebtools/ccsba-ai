@@ -8,12 +8,21 @@ import { FavoritesButton } from "@/components/favorites/FavoritesButton";
 import { Tool } from "@/types/tools";
 
 // =============================================================================
-// OUR FEATURED SECTION - Portfolio showcase of AI Web Tools GPTs
-// This displays ONLY our AI Web Tools GPTs (our creations) - especially those with videos/images
-// bolt.new and gemini remain searchable in database but not featured here (not our designs)
+// CCSBA FEATURED SECTION - Connecticut Cannabis Small Business Alliance
+// Non-profit educational organization providing AI tools to help cannabis businesses flourish
 // =============================================================================
 
 const featuredGPTs = [
+  {
+    title: "Cannabis GPT",
+    description: "Comprehensive cannabis education covering cultivation, strains, medical applications, legal information, and industry insights for enthusiasts and professionals.",
+    badge: "CCSBA PRIORITY",
+    color: "from-green-500 to-lime-600",
+    features: ["Cultivation Guide", "Strain Information", "Medical Applications", "Legal Guidance"],
+    directUrl: "https://cannabisgpt.lovable.app/?via=aiwebtools",
+    videoUrl: "https://vimeo.com/1132373393",
+    emoji: "🌿"
+  },
   {
     title: "🎭 Playwriter GPT",
     description: "Craft professional, fully structured theatrical plays from start to finish. Create original, engaging plays designed to captivate audiences with dramatic structure and character development.",
@@ -149,16 +158,6 @@ const featuredGPTs = [
     directUrl: "https://businessplanandtrainai.lovable.app/?via=aiwebtools",
     imageUrl: "https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-logo-design-with-the-text-business-plan-gene.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true/qt=q:30",
     emoji: "💼"
-  },
-  {
-    title: "Cannabis GPT",
-    description: "Comprehensive cannabis education covering cultivation, strains, medical applications, legal information, and industry insights for enthusiasts and professionals.",
-    badge: "CANNABIS",
-    color: "from-green-500 to-lime-600",
-    features: ["Cultivation Guide", "Strain Information", "Medical Applications", "Legal Guidance"],
-    directUrl: "https://cannabisgpt.lovable.app/?via=aiwebtools",
-    videoUrl: "https://vimeo.com/1132373393",
-    emoji: "🌿"
   },
   {
     title: "Children's Picture Book Maker GPT",
@@ -945,9 +944,40 @@ const OurFeaturedSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our <span className="bg-gradient-to-r from-ai-cyan to-ai-blue bg-clip-text text-transparent">Featured Tools</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Professional-grade AI solutions created by AIWebTools.ai for enterprise and creative professionals
           </p>
+          
+          {/* CCSBA Information Banner */}
+          <div className="max-w-4xl mx-auto mb-12 p-6 bg-gradient-to-r from-green-500/10 to-lime-500/10 border-2 border-green-500/30 rounded-xl backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <span className="text-4xl">🌿</span>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">
+                <span className="bg-gradient-to-r from-green-400 to-lime-400 bg-clip-text text-transparent">
+                  Connecticut Cannabis Small Business Alliance
+                </span>
+              </h3>
+              <span className="text-4xl">🌿</span>
+            </div>
+            <p className="text-lg text-gray-200 leading-relaxed">
+              A non-profit educational organization dedicated to empowering cannabis businesses through innovative AI tools. 
+              We provide cutting-edge technology and resources to help you and your business flourish in the evolving cannabis industry.
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
+              <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/50">
+                Education
+              </Badge>
+              <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/50">
+                Business Support
+              </Badge>
+              <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/50">
+                AI Innovation
+              </Badge>
+              <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/50">
+                Non-Profit
+              </Badge>
+            </div>
+          </div>
         </div>
 
         {/* Web3 Section */}

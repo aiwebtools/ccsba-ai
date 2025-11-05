@@ -68,6 +68,11 @@ const INTENT_PATTERNS = {
     triggers: ['soul', 'spirit', 'spiritual', 'gematria', 'numerology', 'astrology', 'mystical', 'divine', 'cosmic', 'metaphysical', 'essence', 'soul map', 'soul mapping', 'blueprint', 'chakra', 'meditation', 'enlightenment', 'wisdom', 'philosophy', 'tarot', 'crystals', 'healing', 'consciousness', 'manifestation'],
     priority: ['Soul Map GPT', 'ALAN WATTS GPT', '🕊️Mary Magdalene GPT', 'TALK TO THE GODS GPT', 'Sophia Aeterna AI', 'Interpretis 🕰️'],
     categories: ['Spirituality & Philosophy', 'Mystical Tools', 'Personal Development', 'Philosophy']
+  },
+  cannabis: {
+    triggers: ['cannabis', 'marijuana', 'weed', 'hemp', 'cbd', 'thc', 'dispensary', 'cultivation', 'grow', 'edibles', 'strain', 'ccsba', 'connecticut cannabis', 'cannabis business', 'cannabis compliance', 'cannabis facility', 'cannabis logistics', 'cannabis education', 'medical marijuana'],
+    priority: ['Cannabis GPT', 'Mass Cannabis Data GPT', 'Cannabis Logistics GPT', 'The Cannabis Compliance Guide AI', 'Cannabis Edible Dosage Determinator 2.0', 'Cannabis Recipe Assistant', 'Cannabis Educational Course Maker', 'AI Cannabis Facility Safety Inspector'],
+    categories: ['Cannabis & Hemp Industry', 'Hemp & Cannabis', 'Cannabis Tools', 'CCSBA Tools']
   }
 };
 
@@ -216,6 +221,61 @@ export const searchTools = (tools: Tool[], searchTerm: string): Tool[] => {
     const nonAudioTools = tools.filter(tool => !audioTools.includes(tool));
     const finalAudioResults = [...sortedAudioTools, ...nonAudioTools];
     return performEnhancedSearch(finalAudioResults, searchTerm, searchWords, phoneticVariations, intentConfig);
+  }
+
+  // CANNABIS TOOL PRIORITY - Enhanced detection for CCSBA
+  if (normalizedSearchTerm.includes('cannabis') || normalizedSearchTerm.includes('marijuana') ||
+      normalizedSearchTerm.includes('weed') || normalizedSearchTerm.includes('hemp') ||
+      normalizedSearchTerm.includes('cbd') || normalizedSearchTerm.includes('thc') ||
+      normalizedSearchTerm.includes('ccsba') || normalizedSearchTerm.includes('dispensary') ||
+      normalizedSearchTerm.includes('cultivation') || normalizedSearchTerm.includes('strain')) {
+    console.log('🌿 CANNABIS SEARCH DETECTED - Filtering for cannabis tools only');
+    
+    const cannabisTools = tools.filter(tool => {
+      const lowerTitle = tool.title.toLowerCase();
+      const lowerDescription = tool.description.toLowerCase();
+      const lowerCategory = tool.category?.toLowerCase() || '';
+      const lowerTags = tool.tags?.map(tag => tag.toLowerCase()) || [];
+      
+      return lowerTitle.includes('cannabis') || lowerTitle.includes('hemp') || 
+             lowerTitle.includes('marijuana') || lowerTitle.includes('cbd') ||
+             lowerTitle.includes('thc') || lowerTitle.includes('dispensary') ||
+             lowerDescription.includes('cannabis') || lowerDescription.includes('hemp') ||
+             lowerDescription.includes('marijuana') || lowerDescription.includes('cbd') ||
+             lowerCategory.includes('cannabis') || lowerCategory.includes('hemp') ||
+             lowerTags.some(tag => tag.includes('cannabis') || tag.includes('hemp') || 
+                                  tag.includes('marijuana') || tag.includes('cbd'));
+    });
+    
+    console.log(`🌿 Found ${cannabisTools.length} cannabis tools:`, cannabisTools.slice(0, 5).map(t => t.title));
+    
+    const sortedCannabisTools = cannabisTools.sort((a, b) => {
+      let scoreA = 0, scoreB = 0;
+      
+      // Highest priority: CCSBA and Cannabis GPT tools
+      if (a.title.toLowerCase().includes('cannabis gpt')) scoreA += 15000;
+      if (b.title.toLowerCase().includes('cannabis gpt')) scoreB += 15000;
+      if (a.title.toLowerCase().includes('ccsba')) scoreA += 14000;
+      if (b.title.toLowerCase().includes('ccsba')) scoreB += 14000;
+      
+      // High priority: Cannabis-specific tools
+      if (a.title.toLowerCase().includes('mass cannabis')) scoreA += 12000;
+      if (b.title.toLowerCase().includes('mass cannabis')) scoreB += 12000;
+      if (a.title.toLowerCase().includes('cannabis logistics')) scoreA += 11000;
+      if (b.title.toLowerCase().includes('cannabis logistics')) scoreB += 11000;
+      if (a.title.toLowerCase().includes('cannabis compliance')) scoreA += 10000;
+      if (b.title.toLowerCase().includes('cannabis compliance')) scoreB += 10000;
+      
+      // Exact term match in title
+      if (normalizedSearchTerm.includes('cannabis') && a.title.toLowerCase().includes('cannabis')) scoreA += 9000;
+      if (normalizedSearchTerm.includes('cannabis') && b.title.toLowerCase().includes('cannabis')) scoreB += 9000;
+      
+      return scoreB - scoreA;
+    });
+    
+    const nonCannabisTools = tools.filter(tool => !cannabisTools.includes(tool));
+    const finalCannabisResults = [...sortedCannabisTools, ...nonCannabisTools];
+    return performEnhancedSearch(finalCannabisResults, searchTerm, searchWords, phoneticVariations, intentConfig);
   }
 
   // EDUCATION/LEARNING TOOL PRIORITY - Enhanced detection  
