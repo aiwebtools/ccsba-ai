@@ -11,11 +11,19 @@ const Header = () => {
     <header className="fixed top-0 w-full z-[100] bg-black/95 border-b border-cyan-500/30 shadow-lg backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between min-h-[60px]">
-          <Logo />
+          {/* Mobile: Menu button on left */}
+          <div className="flex items-center gap-3 md:hidden">
+            <MobileMenu />
+            <Logo />
+          </div>
+          
+          {/* Desktop/Tablet: Logo on left */}
+          <div className="hidden md:block">
+            <Logo />
+          </div>
           
           <div className="flex items-center gap-3">
             <Navigation />
-            <MobileMenu />
             <DesktopMenu />
             <TabletMenu />
           </div>
