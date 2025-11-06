@@ -48,7 +48,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-36 md:pt-32 lg:pt-36">
+    <section className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-80 md:pt-40 lg:pt-44">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
