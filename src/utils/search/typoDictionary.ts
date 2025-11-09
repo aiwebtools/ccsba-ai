@@ -79,6 +79,20 @@ export const TYPO_DICTIONARY: Record<string, string> = {
   "verifcation": "verification",
   "socialmedia": "social media",
   "socila": "social",
+  
+  // Dream & Sleep concepts
+  "dreem": "dream",
+  "drem": "dream",
+  "nitemare": "nightmare",
+  "nightmair": "nightmare",
+  "nytmare": "nightmare",
+  
+  // Music concepts
+  "musik": "music",
+  "musix": "music",
+  "musci": "music",
+  "sng": "song",
+  "sngs": "songs",
 
   // Website & Web Development
   "web": "website",

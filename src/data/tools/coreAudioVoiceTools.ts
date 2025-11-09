@@ -25,7 +25,7 @@ export const coreAudioVoiceTools: Tool[] = [
     color: "from-orange-500 to-red-600",
     directUrl: "https://www.udio.com/?via=aiwebtools",
     imageUrl: "https://cdn.discordapp.com/attachments/1150636600846450729/1377364206441070592/image.png?ex=6838b1e1&is=68376061&hm=4872d401aedf46706d1213c2a93ce9ca260725cec15f98b2186eb25746fda56f&",
-    tags: ["music generation", "ai music", "song creation", "vocals", "instruments", "audio production", "music ai", "udio"],
+    tags: ["udio", "music generation", "ai music", "song creation", "music generator", "music maker", "music creator", "vocals", "instruments", "audio production", "music ai", "song maker", "audio generation", "music tools", "ai music generator"],
     category: "Audio & Voice Tools",
     rating: 4.8,
     totalVotes: 6543

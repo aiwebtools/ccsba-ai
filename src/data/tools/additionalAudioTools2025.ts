@@ -241,7 +241,7 @@ export const additionalAudioTools2025: Tool[] = [
     emoji: "🎵",
     color: "from-red-500 to-pink-500",
     directUrl: "https://app.suno.ai/?via=aiwebtools",
-    tags: ["Generative Music", "Text-to-Song", "Complete Songs", "Vocals", "Instruments"],
+    tags: ["suno", "music generation", "ai music", "music generator", "music maker", "music creator", "song creation", "generative music", "text to song", "complete songs", "vocals", "instruments", "audio generation", "music tools", "ai music generator"],
     category: "AUDIO & VOICE TOOLS",
     rating: 4.8,
     totalVotes: 4920

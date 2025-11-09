@@ -59,12 +59,12 @@ export const scoreMusicTools = (tool: Tool, searchTerm: string): number => {
       lowerSearchTerm.includes('audio') || lowerSearchTerm.includes('suno') ||
       lowerSearchTerm.includes('udio')) {
     
-    // HIGHEST PRIORITY: Suno and Udio
+    // ULTIMATE PRIORITY: Suno and Udio - MASSIVELY INCREASED
     if (lowerTitle.includes('suno')) {
-      score += 6000; // Highest priority for Suno
+      score += 50000; // ULTIMATE priority for Suno
     }
     if (lowerTitle.includes('udio')) {
-      score += 5900; // Second highest for Udio
+      score += 49000; // Second ultimate for Udio
     }
     
     // High priority music generation specific matches
@@ -78,12 +78,12 @@ export const scoreMusicTools = (tool: Tool, searchTerm: string): number => {
       score += 4300;
     }
     
-    // Tag-based scoring for music tools
+    // Tag-based scoring for music tools - MASSIVELY INCREASED
     if (lowerTags.some(tag => tag.includes('suno'))) {
-      score += 5800;
+      score += 48000;
     }
     if (lowerTags.some(tag => tag.includes('udio'))) {
-      score += 5700;
+      score += 47000;
     }
     if (lowerTags.some(tag => tag.includes('music generation') || tag.includes('ai music'))) {
       score += 4000;

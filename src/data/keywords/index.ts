@@ -8,8 +8,9 @@ import { userIntentKeywords } from './userIntentKeywords';
 import { specialtyKeywords } from './specialtyKeywords';
 import { searchMetaKeywords } from './searchMetaKeywords';
 import { aiWebToolsKeywords } from './aiWebToolsKeywords';
+import { conceptMapping } from './conceptMapping';
 
-// Enhanced keyword mapping for intelligent search - AI tools focused
+// Enhanced keyword mapping for intelligent search - AI tools focused with concept mapping
 export const keywordMapping: Record<string, string[]> = {
   ...coreAIKeywords,
   ...creativeKeywords,
@@ -21,6 +22,7 @@ export const keywordMapping: Record<string, string[]> = {
   ...specialtyKeywords,
   ...searchMetaKeywords,
   ...aiWebToolsKeywords,
+  ...conceptMapping, // Smart concept-to-tool mapping
   
   // NAME ANALYSIS KEYWORDS - ULTRA HIGH PRIORITY FOR NAME SEARCHES
   "name": ["name insight research & predictor gpt", "name insight research", "name predictor", "name meaning", "name analysis", "personality insights", "numerology", "cultural significance", "personal discovery", "name research", "identity", "naming", "whatsmynamegpt"],
@@ -104,12 +106,18 @@ export const keywordMapping: Record<string, string[]> = {
   "no-code": ["lovable.dev", "app builder", "build app", "web app builder", "no code", "visual development", "drag and drop"],
   "low-code": ["lovable.dev", "app builder", "build app", "web app builder", "low code", "visual development"],
   
-  // Enhanced Sound and Audio AI Tools - HIGHEST PRIORITY
+  // Enhanced Sound and Audio AI Tools - SUNO & UDIO ULTIMATE PRIORITY
   "sound": ["suno", "udio", "eleven labs", "murf", "speechify", "text to speech", "tts", "voice generation", "audio generation", "music generation", "ai music", "audio ai", "voice ai", "sound effects", "audio tools", "music tools", "voice tools", "sound generator", "audio creator", "music creator", "voice creator", "speech synthesis", "audio production", "sound design", "music video maker", "podcast script writer"],
-  "audio": ["sound", "music", "voice", "speech", "suno", "udio", "eleven labs", "murf", "speechify", "text to speech", "tts", "voice generation", "audio generation", "music generation", "ai music", "audio ai", "voice ai", "sound effects", "audio tools", "music tools", "voice tools", "podcast", "audio production", "sound design"],
-  "voice": ["speech", "audio", "sound", "eleven labs", "murf", "speechify", "text to speech", "tts", "voice generation", "voice cloning", "ai voice", "voice ai", "voice tools", "voice over", "narration", "voice synthesis", "call agent", "phone agent", "voice agent", "nucleus", "voice ai"],
-  "speech": ["voice", "audio", "sound", "text to speech", "tts", "speech synthesis", "eleven labs", "murf", "speechify", "voice generation", "ai voice", "voice ai", "speech ai", "speech tools"],
+  "audio": ["suno", "udio", "eleven labs", "sound", "music", "voice", "speech", "murf", "speechify", "text to speech", "tts", "voice generation", "audio generation", "music generation", "ai music", "audio ai", "voice ai", "sound effects", "audio tools", "music tools", "voice tools", "podcast", "audio production", "sound design"],
+  "voice": ["eleven labs", "murf", "speechify", "speech", "audio", "sound", "text to speech", "tts", "voice generation", "voice cloning", "ai voice", "voice ai", "voice tools", "voice over", "narration", "voice synthesis", "call agent", "phone agent", "voice agent", "nucleus", "voice ai", "suno", "udio"],
+  "speech": ["eleven labs", "murf", "speechify", "voice", "audio", "sound", "text to speech", "tts", "speech synthesis", "voice generation", "ai voice", "voice ai", "speech ai", "speech tools"],
   "music": ["suno", "udio", "music generation", "ai music", "song creation", "audio generation", "music maker", "music creator", "boomy", "aiva", "music video maker", "audio production", "sound generation", "music ai", "song maker", "music tools", "audio tools", "sound", "audio"],
+  "music generator": ["suno", "udio", "music generation", "ai music", "song creation", "music maker", "music creator", "boomy", "music video maker"],
+  "music generation": ["suno", "udio", "ai music", "music generator", "song creation", "music maker", "boomy"],
+  "ai music": ["suno", "udio", "music generation", "music generator", "song creation", "boomy", "music video maker"],
+  "song": ["suno", "udio", "music generation", "ai music", "music video maker", "music melodies"],
+  "suno": ["music", "music generation", "ai music", "song creation", "audio generation"],
+  "udio": ["music", "music generation", "ai music", "song creation", "audio generation"],
   "tts": ["text to speech", "voice", "speech", "audio", "eleven labs", "murf", "speechify", "voice generation", "speech synthesis", "ai voice", "voice ai"],
   "text to speech": ["tts", "voice", "speech", "audio", "eleven labs", "murf", "speechify", "voice generation", "speech synthesis", "ai voice", "voice ai"],
   
