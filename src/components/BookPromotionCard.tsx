@@ -27,17 +27,14 @@ const BookPromotionCard = () => {
               {/* Book Visual */}
               <div className="lg:w-1/3 p-8 flex justify-center">
                 <div className="relative">
-                  <div className="w-48 h-64 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <div className="p-4 text-center h-full flex flex-col justify-between">
-                      <div>
-                        <BookOpen className="text-white mx-auto mb-2" size={32} />
-                        <h3 className="text-white font-bold text-lg leading-tight">The Gospel of</h3>
-                        <h3 className="text-white font-bold text-xl leading-tight">Deployable Robots</h3>
-                      </div>
-                      <div className="text-white text-sm">
-                        By AIWebTools.AI
-                      </div>
-                    </div>
+                  <div className="w-64 h-[480px] rounded-lg shadow-2xl overflow-hidden">
+                    <iframe 
+                      src="https://www.youtube.com/embed/lG1rMaImBNc" 
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Gospel of Deployable Robots Video"
+                    />
                   </div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg blur-xl -z-10"></div>
                 </div>
