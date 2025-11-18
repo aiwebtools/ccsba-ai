@@ -128,7 +128,7 @@ export const fourthPriorityFeaturedGPTs: Tool[] = [
     color: "from-orange-500 to-red-500",
     category: "Food & Hospitality AI Tools",
     directUrl: "https://chefgpt.lovable.app/?via=aiwebtools",
-    videoUrl: "https://www.youtube.com/watch?v=vJz1HOGtV0I",
+    videoUrl: "https://youtu.be/S_0SSog3tNo?si=ju2OACpfAjzvQIda",
     rating: 4.8,
     totalVotes: 4200,
     tags: ["cooking", "recipes", "culinary", "chef", "food preparation"]
