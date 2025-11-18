@@ -62,6 +62,20 @@ const DisclaimerPopup = () => {
         
         <ScrollArea className="max-h-[40vh] sm:max-h-60 pr-2">
           <div className="space-y-3 text-sm text-gray-300">
+            <div className="bg-yellow-900/40 border border-yellow-500/60 rounded-lg p-4 mb-4">
+              <h4 className="font-semibold text-yellow-400 mb-2 flex items-center">
+                <AlertTriangle className="w-5 h-5 mr-2" />
+                Age Restriction & Usage Agreement
+              </h4>
+              <ul className="list-disc list-inside ml-2 space-y-1 text-xs text-yellow-200">
+                <li>You must be 18 years or older to use this website</li>
+                <li>If under 18, you must have parental consent and supervision</li>
+                <li>Users must be in a jurisdiction that allows the usage of AI tools</li>
+                <li><strong>Use at your own risk</strong> - All tools are provided "as is"</li>
+                <li><strong>Use responsibly</strong> - Verify AI outputs with professionals before taking action</li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="font-semibold text-cyan-400 mb-2">Data Collection & Google Analytics</h4>
               <p className="leading-relaxed mb-2">

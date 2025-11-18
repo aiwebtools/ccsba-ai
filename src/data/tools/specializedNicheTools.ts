@@ -35,7 +35,7 @@ export const specializedNicheTools: Tool[] = [
     emoji: "👨‍🍳",
     color: "from-red-500 to-orange-600",
     directUrl: "https://chefgpt.lovable.app/?via=aiwebtools",
-    videoUrl: "https://www.youtube.com/watch?v=vJz1HOGtV0I",
+    videoUrl: "https://youtu.be/S_0SSog3tNo?si=ju2OACpfAjzvQIda",
     tags: ["culinary arts", "recipe creation", "cooking assistance", "meal planning", "chef expertise"],
     category: "Specialized Niche Tools",
     rating: 4.8,
