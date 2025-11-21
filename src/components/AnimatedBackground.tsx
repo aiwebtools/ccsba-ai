@@ -34,7 +34,7 @@ const AnimatedBackground = () => {
       if (!leavesContainer) return;
 
       const isMobile = window.innerWidth < 768;
-      const leafCount = isMobile ? 8 : 15;
+      const leafCount = isMobile ? 20 : 40; // Increased from 8/15 to 20/40 for more cannabis theme
 
       for (let i = 0; i < leafCount; i++) {
         const leaf = document.createElement('div');

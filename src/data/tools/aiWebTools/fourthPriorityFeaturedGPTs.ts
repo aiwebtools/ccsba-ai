@@ -180,6 +180,7 @@ export const fourthPriorityFeaturedGPTs: Tool[] = [
     color: "from-green-500 to-blue-600",
     category: "AI Development & Platforms",
     directUrl: "https://binarytoconvertergpt.lovable.app/?via=aiwebtools",
+    videoUrl: "https://youtu.be/ihRLRFojReY",
     imageUrl: "https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-sophisticated-and-futuristic-advertisement-.jpeg/:/cr=t:11.11%25,l:0%25,w:100%25,h:88.89%25/rs=w:1200,h:600,cg:true",
     rating: 4.4,
     totalVotes: 2800,

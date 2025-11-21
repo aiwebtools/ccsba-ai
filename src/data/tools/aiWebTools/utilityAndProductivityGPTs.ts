@@ -163,6 +163,7 @@ export const utilityAndProductivityGPTs: Tool[] = [
     emoji: "🔢",
     color: "from-gray-500 to-blue-600",
     directUrl: "https://binarytoconvertergpt.lovable.app/?via=aiwebtools",
+    videoUrl: "https://youtu.be/ihRLRFojReY",
     imageUrl: "https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-sophisticated-and-futuristic-advertisement-.jpeg/:/cr=t:11.11%25,l:0%25,w:100%25,h:88.89%25/rs=w:1200,h:600,cg:true",
     tags: ["binary conversion", "text encoding", "computer language", "data conversion", "programming tools", "aiwebtools", "binary", "converter", "text to binary"],
     category: "Utility & Productivity",
