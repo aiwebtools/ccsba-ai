@@ -167,8 +167,11 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-cyan-400">AI TOOLS THAT BEND THE FABRIC OF TIME...LITERALLY</span>
+                <span className="text-green-400">AI TOOLS FOR EVERY ASPECT OF YOUR CANNABIS BUSINESS</span>
               </h2>
+              <p className="text-lg text-green-200 max-w-3xl mx-auto">
+                From cultivation to compliance, marketing to operations - CCSBA has you covered
+              </p>
             </div>
             
             <div className="max-w-6xl mx-auto">
