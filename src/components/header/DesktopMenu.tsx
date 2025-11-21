@@ -177,10 +177,10 @@ const DesktopMenu = () => {
                 </DropdownMenuItem>
                 
                 <DropdownMenuItem
-                  onClick={(e) => { handleExternalLink("https://connecticutcannabis.org", e); }}
+                  onClick={(e) => { handleExternalLink("https://ctcannabisalliance.org", e); }}
                   className="text-green-100 hover:bg-green-500/20 rounded-lg h-16 text-lg font-medium px-4 col-span-1 border border-green-500/30"
                 >
-                  <span className="mr-4 text-2xl">🌿</span> CCSBA Main Site
+                  <span className="mr-4 text-2xl">🌿</span> CCSBA HOMEPAGE
                 </DropdownMenuItem>
                 
                 <DropdownMenuItem

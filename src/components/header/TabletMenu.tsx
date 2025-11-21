@@ -54,6 +54,13 @@ const TabletMenu = () => {
     navigate('/main-category/ALL%20AI%20TOOLS');
   };
 
+  const handleExternalLink = (url: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('🌀 External link clicked in tablet menu:', url);
+    createTimePortalEffect(url);
+  };
+
   const handleToolClick = (tool: any) => {
     setSearchTerm("");
     setIsSearchOpen(false);
@@ -262,6 +269,12 @@ const TabletMenu = () => {
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => navigate('/our-story')} className="text-cyan-100 hover:bg-cyan-500/20 mb-2 rounded">
                 📖 Our Story
+              </DropdownMenuItem>
+              <DropdownMenuItem 
+                onClick={(e) => { handleExternalLink("https://ctcannabisalliance.org", e); }}
+                className="text-green-100 hover:bg-green-500/20 mb-2 rounded border border-green-500/30"
+              >
+                🌿 CCSBA HOMEPAGE
               </DropdownMenuItem>
               <DropdownMenuSeparator className="border-gray-700 mb-2" />
               
