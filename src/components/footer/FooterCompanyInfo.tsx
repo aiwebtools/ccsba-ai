@@ -72,7 +72,7 @@ const FooterCompanyInfo = () => {
       <div className="pt-4 border-t border-green-500/30">
         <div className="text-xs text-gray-400 leading-relaxed">
           <p className="mb-2">
-            <strong className="text-green-400">AIWebTools.AI</strong> is an independent operating entity that designed and built this AI tools platform specifically for CCSBA members.
+            <strong className="text-green-400">AIWebTools.AI</strong> designed and built this AI tools platform, which was donated to CCSBA to support our members.
           </p>
           <p className="mb-2">
             We empower the community with cutting-edge AI tools for every aspect of your business—from consumers to small business owners to industry leaders.
