@@ -215,6 +215,15 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-700 rounded-full" />
                 </button>
               </div>
+              
+              {/* Email Signup Form */}
+              <div className="mt-12 max-w-xl mx-auto">
+                <div className="bg-gradient-to-br from-green-900/40 to-lime-900/40 p-8 rounded-2xl border-2 border-green-500/30 shadow-2xl shadow-green-500/20">
+                  <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Join Our Community</h3>
+                  <p className="text-green-200 text-center mb-6">Stay updated with the latest AI tools and cannabis industry insights</p>
+                  <div style={{textAlign: "left"}} className="sender-form-field" data-sender-form-id="eXD0Pl"></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
