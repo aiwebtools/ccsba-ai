@@ -45,9 +45,9 @@ Best regards,
   return (
     <>
       <SEOHead 
-        title="Our Story – AIWebTools.ai | Free AI Tools Directory"
-        description="Learn about AIWebTools.ai: A curated collection of 1,300+ free AI tools built to help creators, entrepreneurs, and learners access AI technology."
-        keywords={["AI Web Tools story", "free AI tools", "AI directory", "AI tools collection", "AI resources"]}
+        title="Our Story – CCSBA | Connecticut Cannabis Small Business Alliance"
+        description="Learn about CCSBA: Connecticut Cannabis Small Business Alliance non-profit educational organization dedicated to empowering cannabis businesses through AI technology. For adults 18+."
+        keywords={["CCSBA", "Connecticut Cannabis Small Business Alliance", "cannabis business", "cannabis AI tools", "Connecticut cannabis", "cannabis education", "cannabis advocacy"]}
       />
       
       <AnimatedBackground />
@@ -60,8 +60,11 @@ Best regards,
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 glow-text-effect">
               OUR STORY
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-300 font-light tracking-wide mb-8">
-              Building Tools to Empower Creativity and Innovation
+            <p className="text-xl md:text-2xl text-green-300 font-light tracking-wide mb-8">
+              🌿 Connecticut Cannabis Small Business Alliance 🌿
+            </p>
+            <p className="text-lg md:text-xl text-cyan-300 font-light tracking-wide mb-8">
+              Empowering Cannabis Businesses Through AI Innovation
             </p>
             
             {/* Quick Navigation */}
@@ -96,37 +99,52 @@ Best regards,
           <div className="max-w-4xl mx-auto space-y-12">
             
             {/* Opening */}
-            <div className="text-center">
+            <div className="text-center bg-gradient-to-r from-green-900/40 to-lime-900/40 p-8 rounded-2xl border-2 border-green-500/30">
+              <p className="text-lg md:text-xl leading-relaxed text-gray-300 font-light mb-4">
+                <span className="text-green-400 font-bold text-2xl">CCSBA</span> (Connecticut Cannabis Small Business Alliance) is a non-profit educational organization dedicated to empowering cannabis businesses—from consumers to industry leaders.
+              </p>
               <p className="text-lg md:text-xl leading-relaxed text-gray-300 font-light">
-                AIWebTools.ai started as a simple idea: gather helpful AI tools in one place and share them freely with anyone who needs them.
+                🌿 <span className="text-lime-400 font-semibold">Together we grow. United we stand.</span> 🌿
               </p>
             </div>
 
             <Separator className="bg-cyan-500/20" />
 
             {/* The Beginning */}
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-400">The Beginning</h2>
+            <div className="bg-gradient-to-r from-green-900/50 to-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-green-400 flex items-center">
+                <span className="text-4xl mr-3">🌱</span>
+                The Beginning
+              </h2>
+              <p className="text-lg leading-relaxed text-gray-300 mb-4">
+                CCSBA was born from the Connecticut cannabis community's need for support, education, and advocacy. As a non-profit organization, we recognized that cannabis businesses face unique challenges and deserve access to cutting-edge tools to thrive.
+              </p>
               <p className="text-lg leading-relaxed text-gray-300">
-                This project began with CT Hemp Shop, a local business supporting small entrepreneurs. When challenges arose, it became clear that people need better tools to navigate complex systems and build their own paths forward.
+                Through a generous donation from AIWebTools.AI, we now offer our members access to 1,300+ AI-powered tools designed to help cannabis businesses grow, innovate, and succeed.
               </p>
             </div>
 
             {/* The Mission */}
-            <div className="bg-gradient-to-r from-red-900/40 to-orange-900/40 backdrop-blur-sm border border-red-500/30 rounded-lg p-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-red-400 flex items-center">
+            <div className="bg-gradient-to-r from-green-900/40 to-lime-900/40 backdrop-blur-sm border border-green-500/30 rounded-lg p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-green-400 flex items-center">
                 <Zap className="w-8 h-8 mr-3" />
-                The Mission
+                Our Mission
               </h2>
               <p className="text-lg leading-relaxed text-gray-300 mb-4">
-                The goal is straightforward: make AI tools accessible to everyone, regardless of technical background or budget.
+                <span className="text-green-400 font-bold">CCSBA's mission</span> is to empower Connecticut cannabis businesses through education, advocacy, and access to innovative technology.
               </p>
               <p className="text-lg leading-relaxed text-gray-300 mb-6">
-                Whether you're starting a business, learning something new, or just exploring what AI can do, these tools are here to help.
+                Whether you're a consumer, small business owner, cultivator, or industry leader, these AI tools are here to support your cannabis business journey.
               </p>
-              <div className="bg-black/50 border-l-4 border-orange-400 pl-6 py-4">
-                <p className="text-orange-300 font-medium italic text-lg">
-                  Free tools. No barriers. Just resources to help you build what you envision.
+              <div className="bg-black/50 border-l-4 border-lime-400 pl-6 py-4 mb-6">
+                <p className="text-lime-300 font-medium italic text-lg">
+                  🌿 Free AI tools donated by AIWebTools.AI. Educational and informational purposes only. For adults 18+.
+                </p>
+              </div>
+              <div className="bg-red-900/30 border border-red-500/40 rounded-lg p-4">
+                <p className="text-red-300 font-semibold text-sm mb-2">⚠️ IMPORTANT DISCLAIMER:</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  These AI tools are provided for <span className="text-yellow-400 font-semibold">educational and informational purposes only</span>. Users must be <span className="text-yellow-400 font-semibold">18 years or older</span>. We strongly encourage everyone to <span className="text-cyan-400 font-semibold">verify all AI-generated outputs for accuracy</span> and use AI technology <span className="text-green-400 font-semibold">ethically and responsibly</span>.
                 </p>
               </div>
             </div>
@@ -299,20 +317,20 @@ Best regards,
               </div>
             </div>
 
-            {/* The Anchor Quote - Cyberpunk Neon Style */}
-            <div className="relative bg-gradient-to-r from-yellow-900/20 via-orange-900/20 to-red-900/20 backdrop-blur-sm border border-yellow-500/50 rounded-lg p-8 text-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-yellow-500/5 blur-2xl"></div>
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/80 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/80 to-transparent"></div>
+            {/* The Anchor Quote - Cannabis Themed */}
+            <div className="relative bg-gradient-to-r from-green-900/30 via-lime-900/30 to-green-900/30 backdrop-blur-sm border border-green-500/50 rounded-lg p-8 text-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-lime-500/5 to-green-500/5 blur-2xl"></div>
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent"></div>
               
-              <h2 className="relative text-2xl md:text-3xl font-bold mb-6 text-yellow-400">What We Offer</h2>
-              <div className="relative border border-cyan-500/30 bg-black/40 backdrop-blur-sm rounded-md p-6">
+              <h2 className="relative text-2xl md:text-3xl font-bold mb-6 text-green-400">What CCSBA Offers</h2>
+              <div className="relative border border-green-500/30 bg-black/40 backdrop-blur-sm rounded-md p-6">
                 <blockquote className="text-lg md:text-xl leading-relaxed text-gray-200 font-light mb-6 max-w-3xl mx-auto">
-                  <span className="text-cyan-400 text-2xl">"</span>A curated collection of AI tools, organized and made accessible. These resources are here to help you learn, build, and create whatever you envision.<span className="text-cyan-400 text-2xl">"</span>
+                  <span className="text-green-400 text-2xl">"</span>A comprehensive AI tools portal donated by AIWebTools.AI to support Connecticut cannabis businesses. These resources empower our community to grow, innovate, and thrive in the cannabis industry.<span className="text-green-400 text-2xl">"</span>
                 </blockquote>
-                <p className="text-cyan-400 text-lg font-medium">— AIWebTools.ai</p>
+                <p className="text-green-400 text-lg font-medium">— Connecticut Cannabis Small Business Alliance</p>
               </div>
-              <p className="relative text-white text-2xl font-bold mt-4">Explore. Learn. Create.</p>
+              <p className="relative text-white text-2xl font-bold mt-4">🌿 Grow. Unite. Succeed. 🌿</p>
             </div>
 
             {/* What's Here */}

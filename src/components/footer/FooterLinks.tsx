@@ -24,9 +24,9 @@ const FooterLinks = () => {
             </a>
             <button
               onClick={(e) => handleExternalLink("https://ctcannabisalliance.org", e)}
-              className="block text-sm text-gray-300 hover:text-green-400 transition-colors text-left"
+              className="block text-sm text-gray-300 hover:text-green-400 transition-colors text-left font-semibold"
             >
-              🌿 CCSBA Main Website
+              🌿 CCSBA HOMEPAGE
             </button>
             <button
               onClick={(e) => handleExternalLink("https://ctcannabisalliance.org/all-products/ols/categories/membership-enrollment", e)}
