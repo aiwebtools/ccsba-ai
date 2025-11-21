@@ -112,7 +112,7 @@ Best regards,
   };
 
   return (
-    <footer className="bg-gradient-to-b from-black via-green-950/20 to-black text-gray-100 py-16 border-t border-green-500/30">
+    <footer className="bg-gradient-to-b from-black via-green-900/40 to-green-950/60 text-gray-100 py-16 border-t border-green-500/40 shadow-lg shadow-green-500/20">
       <div className="container mx-auto px-4">
         <FooterActions 
           handleExternalLink={handleExternalLink}

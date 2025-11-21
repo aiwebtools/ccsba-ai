@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-[100] bg-black/95 border-b border-cyan-500/30 shadow-lg backdrop-blur-sm">
+    <header className="fixed top-0 w-full z-[100] bg-gradient-to-r from-green-900/95 via-black/95 to-green-900/95 border-b border-green-500/40 shadow-lg shadow-green-500/20 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between min-h-[60px]">
           {/* Mobile: Menu button on left, Logo in center, Home button on right */}

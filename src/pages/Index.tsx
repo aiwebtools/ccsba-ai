@@ -18,6 +18,7 @@ import LazySearchPortal from "@/components/LazySearchPortal";
 import InteractiveMatrixBackground from "@/components/InteractiveMatrixBackground";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import FloatingCannabisButton from "@/components/FloatingCannabisButton";
+import DelayedClonePopup from "@/components/DelayedClonePopup";
 import { createTimePortalEffect } from "@/utils/timeEffects";
 import { Leaf } from "lucide-react";
 
@@ -246,6 +247,7 @@ const Index = () => {
       </div>
       
       <ConsentPopup />
+      <DelayedClonePopup />
     </div>
   );
 };

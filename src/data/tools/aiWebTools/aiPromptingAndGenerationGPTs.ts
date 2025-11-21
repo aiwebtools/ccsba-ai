@@ -41,6 +41,18 @@ export const aiPromptingAndGenerationGPTs: Tool[] = [
     totalVotes: 3124
   },
   {
+    icon: Sparkles,
+    title: "Meta.ai Video Prompt Generator GPT",
+    description: "Meta.ai Video Prompt Generator GPT is a specialized AI tool designed for quick copy-paste productivity specifically for Meta.ai video prompts and storylines. This GPT generates optimized text prompts tailored for Meta.ai's video generation platform, making it easy to create professional-quality video content with minimal effort. Perfect for content creators, marketers, and video producers looking to streamline their workflow with ready-to-use prompts designed specifically for Meta.ai's unique video generation capabilities.",
+    emoji: "📹",
+    color: "from-purple-500 to-pink-600",
+    directUrl: "https://chatgpt.com/g/g-691b5852be7c8191beda5d0429f727bd-meta-ai-video-prompt-generator?via=aiwebtools",
+    tags: ["meta.ai", "video prompts", "prompt generation", "ai video", "meta ai", "storylines", "content creation", "video production", "aiwebtools"],
+    category: "AI Prompting & Generation",
+    rating: 4.7,
+    totalVotes: 2845
+  },
+  {
     icon: MessageSquare,
     title: "ChatGPT",
     description: "OpenAI's flagship conversational AI model that can assist with writing, analysis, math, coding, and creative tasks. ChatGPT uses advanced language models to provide helpful, harmless, and honest responses to a wide variety of prompts and questions.",
