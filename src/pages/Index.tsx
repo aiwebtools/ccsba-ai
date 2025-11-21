@@ -17,6 +17,9 @@ import LazyFeaturedTools from "@/components/LazyFeaturedTools";
 import LazySearchPortal from "@/components/LazySearchPortal";
 import InteractiveMatrixBackground from "@/components/InteractiveMatrixBackground";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import FloatingCannabisButton from "@/components/FloatingCannabisButton";
+import { createTimePortalEffect } from "@/utils/timeEffects";
+import { Leaf } from "lucide-react";
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-[200px]">
@@ -150,6 +153,9 @@ const Index = () => {
       {/* Fixed Header - outside of relative container */}
       <Header />
       
+      {/* Floating Cannabis GPT Button */}
+      <FloatingCannabisButton />
+      
       <div className="relative z-10">
         <HeroSection />
         <div id="categories-section">
@@ -170,7 +176,7 @@ const Index = () => {
                 <iframe
                   ref={mainVideoRef}
                   className="absolute inset-0 w-full h-full rounded-xl border border-cyan-500/30 bg-slate-800"
-                  src="https://www.youtube.com/embed/4zflGSSuBcA?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&enablejsapi=1&playsinline=1&vq=hd1080&loop=0&iv_load_policy=3&cc_load_policy=0&fs=1&color=red&theme=dark"
+                  src="https://www.youtube.com/embed/zGGdCzxFNS4?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1&enablejsapi=1&playsinline=1&vq=hd1080&loop=0&iv_load_policy=3&cc_load_policy=0&fs=1&color=red&theme=dark"
                   title="AI Web Tools Featured Video - 1080p HD"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
@@ -178,6 +184,32 @@ const Index = () => {
                   loading="eager"
                   onLoad={() => console.log('🎥 Video iframe loaded and ready')}
                 ></iframe>
+              </div>
+              
+              {/* Cannabis GPT Button Below Video */}
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('🌿 Cannabis GPT button clicked from video section');
+                    createTimePortalEffect('https://cannabisgpt.lovable.app/?via=aiwebtools', 'Cannabis GPT');
+                  }}
+                  className="group relative px-8 py-4 bg-gradient-to-r from-green-500 via-lime-500 to-green-600 hover:from-green-400 hover:via-lime-400 hover:to-green-500 text-white font-bold text-lg rounded-full shadow-2xl shadow-green-500/40 hover:shadow-green-400/60 transform hover:scale-105 transition-all duration-300 border-2 border-green-400 overflow-hidden"
+                >
+                  {/* Animated background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 via-lime-400/20 to-green-500/20 animate-pulse rounded-full"></div>
+                  
+                  {/* Button Content */}
+                  <span className="relative flex items-center space-x-3">
+                    <Leaf className="w-6 h-6 group-hover:animate-bounce" />
+                    <span>🌿 Explore Cannabis GPT</span>
+                    <Leaf className="w-6 h-6 group-hover:animate-bounce" />
+                  </span>
+                  
+                  {/* Shine effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-700 rounded-full" />
+                </button>
               </div>
             </div>
           </div>
