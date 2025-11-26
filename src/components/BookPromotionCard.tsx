@@ -2,6 +2,7 @@ import { BookOpen, ExternalLink, Download, Eye, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { createTimePortalEffect } from "@/utils/timeEffects";
+import bookImage from "@/assets/deployable-chatbots-book.jpg";
 
 const BookPromotionCard = () => {
   const handleBuyBook = (e: React.MouseEvent) => {
@@ -27,16 +28,14 @@ const BookPromotionCard = () => {
               {/* Book Visual */}
               <div className="lg:w-1/3 p-8 flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-[480px] rounded-lg shadow-2xl overflow-hidden">
-                    <iframe 
-                      src="https://www.youtube.com/embed/lG1rMaImBNc" 
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title="Gospel of Deployable Robots Video"
+                  <div className="w-full max-w-md rounded-lg shadow-2xl overflow-hidden">
+                    <img 
+                      src={bookImage} 
+                      alt="The Free Book of Deployable Chatbots"
+                      className="w-full h-auto object-cover"
                     />
                   </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg blur-xl -z-10"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-green-500/30 to-cyan-500/30 rounded-lg blur-xl -z-10"></div>
                 </div>
               </div>
 
@@ -44,9 +43,10 @@ const BookPromotionCard = () => {
               <div className="lg:w-2/3 p-8">
                 <div className="text-center lg:text-left">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                      The Gospel of Deployable Robots
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">
+                      The Free Book of Deployable Chatbots
                     </span>
+                    <span className="block text-lg text-purple-300 mt-2">(Starts in Chapter 3)</span>
                   </h2>
                   
                   <p className="text-purple-200 text-lg mb-4">
@@ -103,14 +103,14 @@ const BookPromotionCard = () => {
                       </DialogTrigger>
                       <DialogContent className="max-w-4xl h-[80vh]">
                         <DialogHeader>
-                          <DialogTitle>Gospel of Deployable Robots - Preview</DialogTitle>
+                          <DialogTitle>The Free Book of Deployable Chatbots - Preview</DialogTitle>
                         </DialogHeader>
                         <div className="w-full h-full flex flex-col items-center justify-center gap-4">
                           <iframe 
                             src="https://drive.google.com/file/d/18LHLsPXIjjtZgIAaXry5IktOGm9lacTq/preview" 
                             className="w-full flex-1 rounded-lg pointer-events-auto select-text"
                             allow="autoplay"
-                            title="Gospel of Deployable Robots Preview"
+                            title="The Free Book of Deployable Chatbots Preview"
                             style={{ userSelect: 'text' }}
                           />
                           <DialogClose asChild>
