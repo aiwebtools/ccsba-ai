@@ -51,7 +51,7 @@ const DelayedClonePopup = () => {
     e.stopPropagation();
     console.log('🌀 Clone button clicked from delayed popup');
     setIsVisible(false);
-    createTimePortalEffect('https://lovable.dev/projects/d178ea3e-c9d3-464e-b3a6-6a5878c288be?via=aiwebtools', 'Clone AI Web Tools');
+    createTimePortalEffect('https://lovable.dev/projects/5454d30d-695f-4a2c-b1b2-103c20f9bed6?via=aiwebtools', 'Clone AI Web Tools');
   };
 
   if (!isVisible) return null;

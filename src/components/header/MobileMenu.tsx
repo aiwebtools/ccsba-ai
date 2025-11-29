@@ -355,7 +355,7 @@ const MobileMenu = () => {
                   <DropdownMenuItem 
                     onClick={(e) => { 
                       e.preventDefault();
-                      handleExternalLink("https://lovable.dev/projects/d178ea3e-c9d3-464e-b3a6-6a5878c288be?via=aiwebtools", e);
+                      handleExternalLink("https://lovable.dev/projects/5454d30d-695f-4a2c-b1b2-103c20f9bed6?via=aiwebtools", e);
                     }}
                     className="text-yellow-100 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-amber-500/20 mb-2 rounded flex items-center space-x-2 bg-gradient-to-r from-yellow-600/10 to-amber-600/10 border border-yellow-500/30 p-2"
                   >
