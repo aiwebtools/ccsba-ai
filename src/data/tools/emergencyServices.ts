@@ -41,6 +41,18 @@ export const emergencyServices: Tool[] = [
     totalVotes: 3890
   },
   {
+    icon: Shield,
+    title: "Self Sufficiency GPT",
+    description: "Teaches complete, precise self-sufficiency systems from first principles to scalable community resilience. By AiWebTools.Ai using the creator's recommended model: GPT-4o.",
+    emoji: "🌱",
+    color: "from-green-600 to-emerald-700",
+    directUrl: "https://chatgpt.com/g/g-6931bd31b0208191a0ebd290977b8e4a-self-sufficiency-gpt",
+    tags: ["self sufficiency", "community resilience", "sustainability", "homesteading", "off-grid living"],
+    category: "Emergency Services",
+    rating: 4.6,
+    totalVotes: 2456
+  },
+  {
     icon: Heart,
     title: "🐾Veterinarian GPT",
     description: "Professional veterinary guidance for pet care, animal health, medical conditions, treatment options, and emergency veterinary care for pets and animals.",
