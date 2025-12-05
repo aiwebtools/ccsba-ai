@@ -53,5 +53,17 @@ export const appraisalAndValuationGPTs: Tool[] = [
     category: "Appraisal & Valuation",
     rating: 4.8,
     totalVotes: 5432
+  },
+  {
+    icon: Award,
+    title: "Sport Card Appraisal GPT",
+    description: "Expert sports trading card appraiser providing market values and insights. By AiWebTools.Ai. Get accurate valuations for your sports cards, from vintage baseball cards to modern basketball rookies. Analyze card condition, rarity, player significance, and current market trends to determine fair market value.",
+    emoji: "🏆",
+    color: "from-red-500 to-orange-600",
+    directUrl: "https://chatgpt.com/g/g-wxZQTXVx9-sport-card-appraisal",
+    tags: ["sports cards", "trading cards", "card appraisal", "collectibles", "baseball cards", "basketball cards", "football cards", "market value", "aiwebtools"],
+    category: "Appraisal & Valuation",
+    rating: 4.7,
+    totalVotes: 2890
   }
 ];
