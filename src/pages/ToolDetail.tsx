@@ -9,6 +9,8 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import ToolDisclaimer from "@/components/ToolDisclaimer";
 import AIWebToolsDisclaimer from "@/components/AIWebToolsDisclaimer";
 import ToolHeader from "@/components/tool-detail/ToolHeader";
+import GlobalSearchBar from "@/components/GlobalSearchBar";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import ToolDescription from "@/components/tool-detail/ToolDescription";
 import ToolMedia from "@/components/tool-detail/ToolMedia";
 import ToolTags from "@/components/tool-detail/ToolTags";
@@ -19,7 +21,6 @@ import { generateStructuredData } from "@/utils/seo";
 import { useToolDetail } from "@/hooks/useToolDetail";
 import ToolNotFound from "@/components/tool-detail/ToolNotFound";
 import ToolPageHeader from "@/components/tool-detail/ToolPageHeader";
-import ToolSearch from "@/components/tool-detail/ToolSearch";
 import MoreToolsSection from "@/components/tool-detail/MoreToolsSection";
 
 const ToolDetail = () => {
@@ -117,6 +118,13 @@ const ToolDetail = () => {
           <div className="max-w-4xl mx-auto">
             <ToolPageHeader totalTools={allTools.length} />
 
+            {/* Main Search Bar - centered at top */}
+            <div className="mb-8">
+              <TooltipProvider>
+                <GlobalSearchBar />
+              </TooltipProvider>
+            </div>
+
             <Card className="overflow-hidden bg-gray-900/80 backdrop-blur-md shadow-2xl shadow-cyan-500/20 border border-cyan-500/30 neon-border">
               <CardHeader>
                 <ToolHeader 
@@ -144,12 +152,6 @@ const ToolDetail = () => {
               {/* Show general third-party disclaimer for all tools */}
               <ToolDisclaimer tool={tool} />
             </div>
-
-            <ToolSearch 
-              searchTerm={searchTerm}
-              onSearchChange={handleSearchChange}
-              totalTools={allTools.length}
-            />
 
             <SimilarTools currentTool={tool} currentToolIndex={toolIndex} />
 
