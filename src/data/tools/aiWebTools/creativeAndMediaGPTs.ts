@@ -26,6 +26,18 @@ import {
 
 export const creativeAndMediaGPTs: Tool[] = [
   {
+    icon: Video,
+    title: "SORA2 Text to Video Prompt Maker GPT",
+    description: "Expert cinematic prompt maker for Sora 2 and all text-to-video platforms. By AiWebTools.Ai using the creator's recommended model: GPT-4o. Master the art of creating stunning video prompts with professional cinematography techniques, scene composition, and visual storytelling for AI video generation.",
+    emoji: "🎥",
+    color: "from-violet-500 to-purple-600",
+    directUrl: "https://chatgpt.com/g/g-69326acb5f348191a2f85c2cdc848c4d-0ra2-text-to-video-prompt-maker",
+    tags: ["sora 2", "text to video", "video prompts", "cinematic prompts", "ai video generation", "prompt engineering", "aiwebtools"],
+    category: "Creative & Media",
+    rating: 4.8,
+    totalVotes: 3210
+  },
+  {
     icon: Megaphone,
     title: "AD Maker GPT4o Image GPT",
     description: "Professional AI-powered advertisement creator that generates stunning visual ads, marketing banners, promotional graphics, and advertising content. Create compelling advertisements with intelligent design suggestions, persuasive copy, and eye-catching visuals optimized for various platforms and marketing campaigns.",
