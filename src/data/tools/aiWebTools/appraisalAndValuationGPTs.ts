@@ -61,6 +61,7 @@ export const appraisalAndValuationGPTs: Tool[] = [
     emoji: "🏆",
     color: "from-red-500 to-orange-600",
     directUrl: "https://chatgpt.com/g/g-wxZQTXVx9-sport-card-appraisal",
+    videoUrl: "https://www.youtube.com/watch?v=lPvOvWWHErM",
     tags: ["sports cards", "trading cards", "card appraisal", "collectibles", "baseball cards", "basketball cards", "football cards", "market value", "aiwebtools"],
     category: "Appraisal & Valuation",
     rating: 4.7,
