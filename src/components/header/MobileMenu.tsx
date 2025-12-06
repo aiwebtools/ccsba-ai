@@ -208,7 +208,8 @@ const MobileMenu = () => {
               <div className="mb-2 p-2 bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg border border-purple-500/30">
                 <p className="text-xs text-gray-300 leading-relaxed">
                   🔗 <span className="font-semibold text-cyan-400">Connect to Your Crypto Wallet</span><br/>
-                  Own forever • Resell for profit • Minted as NFT
+                  Own forever • Resell for profit • Minted as NFT<br/>
+                  <span className="text-green-400 font-semibold">🏦 NO BIO CHIP REQUIRED</span>
                 </p>
               </div>
               <Collapsible open={isWeb3Open} onOpenChange={setIsWeb3Open}>
