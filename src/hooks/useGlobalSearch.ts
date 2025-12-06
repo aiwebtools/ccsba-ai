@@ -33,15 +33,23 @@ export const useGlobalSearch = () => {
   
   // Debounce for heavy scoring stage
   const heavyTerm = useDebounce(searchTerm, 320);
+  
+  // Track current search term for stale checks
+  const currentSearchRef = useRef(searchTerm);
+  currentSearchRef.current = searchTerm;
+  
   // FAST stage: immediate results while typing (super lightweight)
   useEffect(() => {
     const t = searchTerm.trim();
+    
+    // Immediate clear when empty - no delay, no freeze
     if (!t) {
       setSearchResults([]);
       setIsOpen(false);
       setDisplayedCount(30);
       return;
     }
+    
     const q = t.toLowerCase();
     const tokens = q.split(/\s+/).filter(w => w.length >= 3);
 
@@ -173,9 +181,11 @@ export const useGlobalSearch = () => {
   // HEAVY stage: intent + category-aware smart ranking after short pause
   useEffect(() => {
     const trimmedTerm = heavyTerm.trim();
-    if (!trimmedTerm) return; // keep fast results when empty
-    if (trimmedTerm !== searchTerm.trim()) return; // stale guard
-
+    
+    // Skip if empty or if search has changed since debounce started
+    if (!trimmedTerm) return;
+    if (trimmedTerm !== currentSearchRef.current.trim()) return;
+    
     const lowerTerm = trimmedTerm.toLowerCase();
     const tokens = lowerTerm.split(/\s+/).filter(w => w.length >= 3);
 
@@ -305,12 +315,13 @@ export const useGlobalSearch = () => {
     const deduped = quickDeduplicateSearchResults ? quickDeduplicateSearchResults(ranked) : ranked;
     // Don't limit results - enable endless scrolling for all searches
     
-    if (trimmedTerm === searchTerm.trim()) {
+    // Final stale check before updating state - use ref for accurate check
+    if (trimmedTerm === currentSearchRef.current.trim()) {
       setSearchResults(deduped);
       setDisplayedCount(30);
       setIsOpen(true);
     }
-  }, [heavyTerm, searchTerm, indexedTools]);
+  }, [heavyTerm, indexedTools]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
