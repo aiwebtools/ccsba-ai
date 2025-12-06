@@ -867,6 +867,16 @@ const featuredGPTs = [
     directUrl: "https://chatgpt.com/g/g-68c1e9e3b488819193744edfeecf7997-world-reality-decoder-gpt",
     videoUrl: "https://youtu.be/lGck2bUVFDU?si=ywmO-xNwrfmnJmkW",
     emoji: "🔍"
+  },
+  {
+    title: "Manicheism GPT - Some Lost Knowledge of the Light",
+    description: "The resurrected voice of prophet Mani—revealing the lost Light of a hunted faith. The prophet hunted by Rome lives again. By AiWebTools.Ai using the creator's recommended model: GPT-4o. Explore ancient Gnostic wisdom and suppressed religious teachings.",
+    badge: "ANCIENT WISDOM",
+    color: "from-amber-500 to-yellow-700",
+    features: ["Lost Knowledge", "Ancient Wisdom", "Gnostic Teachings", "Spiritual Revelation"],
+    directUrl: "https://chatgpt.com/g/g-69345518771c81919c341622d3b742e5-manicheism-gpt-some-lost-knowledge-of-the-light",
+    imageUrl: "/images/manicheism-gpt.png",
+    emoji: "☀️"
   }
 ];
 
