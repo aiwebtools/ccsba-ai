@@ -77,19 +77,29 @@ export const searchAIWebToolsGPTs = (tools: Tool[], searchTerm: string): Tool[] 
       }
     }
     
-    // Fuzzy matching for common variations
+    // Fuzzy matching for common variations - ENHANCED PING WORDS
     const fuzzyMatches = [
       { search: 'learn', matches: ['learn', 'education', 'course', 'skill', 'study', 'tutorial'] },
       { search: 'chatgpt', matches: ['gpt', 'chat'] },
       { search: 'openai', matches: ['gpt', 'artificial intelligence'] },
       { search: 'ai art', matches: ['restyle', 'graphic', 'design'] },
       { search: 'video', matches: ['movie', 'scene', 'sora'] },
-      { search: 'writing', matches: ['book', 'script', 'content'] },
+      { search: 'writing', matches: ['book', 'script', 'content', 'writer', 'author', 'novel', 'story', 'screenplay', 'article', 'blog'] },
+      { search: 'write', matches: ['book', 'script', 'content', 'writer', 'author', 'novel', 'story', 'screenplay', 'article', 'blog'] },
       { search: 'medical', matches: ['doctor', 'health', 'wellness', 'dr', 'gpt'] },
       { search: 'health', matches: ['medical', 'doctor', 'wellness', 'mental', 'gpt'] },
       { search: 'personal', matches: ['honest advice', 'life coach', 'personal development', 'self-discovery', 'guidance'] },
       { search: 'theatre', matches: ['stage', 'performing', 'drama', 'acting', 'stagemaster', 'choreography'] },
-      { search: 'theater', matches: ['stage', 'performing', 'drama', 'acting', 'stagemaster', 'choreography'] }
+      { search: 'theater', matches: ['stage', 'performing', 'drama', 'acting', 'stagemaster', 'choreography'] },
+      // SPIRITUALITY & RELIGION MATCHING
+      { search: 'spirit', matches: ['spiritual', 'spirituality', 'god', 'gods', 'divine', 'sacred', 'religion', 'religious', 'faith', 'soul', 'gnostic', 'mystical', 'mani', 'manicheism', 'resurrection', 'alan watts', 'mary magdalene', 'sophia', 'oraculum'] },
+      { search: 'spiritual', matches: ['spirit', 'god', 'gods', 'divine', 'sacred', 'religion', 'religious', 'faith', 'soul', 'gnostic', 'mystical', 'mani', 'manicheism', 'resurrection', 'alan watts', 'mary magdalene', 'sophia', 'oraculum'] },
+      { search: 'spirituality', matches: ['spirit', 'god', 'gods', 'divine', 'sacred', 'religion', 'religious', 'faith', 'soul', 'gnostic', 'mystical', 'mani', 'manicheism', 'resurrection', 'alan watts', 'mary magdalene', 'sophia', 'oraculum'] },
+      { search: 'religion', matches: ['spiritual', 'god', 'gods', 'divine', 'sacred', 'faith', 'gnostic', 'christian', 'buddhist', 'hindu', 'islamic', 'jewish', 'mythology'] },
+      { search: 'religious', matches: ['spiritual', 'god', 'gods', 'divine', 'sacred', 'faith', 'gnostic', 'christian', 'buddhist', 'hindu', 'islamic', 'jewish', 'mythology'] },
+      // AGENT MATCHING
+      { search: 'agent', matches: ['agent', 'agents', 'autonomous', 'automation', 'automated', 'assistant', 'bot', 'multi-agent', 'ai agent'] },
+      { search: 'agents', matches: ['agent', 'autonomous', 'automation', 'automated', 'assistant', 'bot', 'multi-agent', 'ai agent'] }
     ];
     
     for (const fuzzy of fuzzyMatches) {
@@ -191,6 +201,75 @@ export const scoreAIWebToolsGPT = (tool: Tool, searchTerm: string): number => {
     }
     if (toolText.includes('choreography') || toolText.includes('costume') || toolText.includes('lighting')) {
       score += 1000;
+    }
+  }
+  
+  // SPIRITUALITY/RELIGION PRIORITY BOOST
+  if (lowerSearchTerm.includes('spirit') || lowerSearchTerm.includes('spiritual') || 
+      lowerSearchTerm.includes('spirituality') || lowerSearchTerm.includes('religion') || 
+      lowerSearchTerm.includes('religious') || lowerSearchTerm.includes('god') || 
+      lowerSearchTerm.includes('divine') || lowerSearchTerm.includes('sacred')) {
+    if (tool.title.toLowerCase().includes('talk to the gods')) {
+      score += 1500;
+    }
+    if (tool.title.toLowerCase().includes('mary magdalene')) {
+      score += 1400;
+    }
+    if (tool.title.toLowerCase().includes('alan watts')) {
+      score += 1350;
+    }
+    if (tool.title.toLowerCase().includes('manicheism') || tool.title.toLowerCase().includes('mani')) {
+      score += 1300;
+    }
+    if (tool.title.toLowerCase().includes('sophia aeterna')) {
+      score += 1250;
+    }
+    if (tool.title.toLowerCase().includes('resurrection')) {
+      score += 1200;
+    }
+    if (tool.title.toLowerCase().includes('oraculum')) {
+      score += 1150;
+    }
+    if (toolText.includes('spiritual') || toolText.includes('religion') || toolText.includes('divine')) {
+      score += 1000;
+    }
+    if (tool.category?.toLowerCase().includes('spiritual') || tool.category?.toLowerCase().includes('religion')) {
+      score += 900;
+    }
+  }
+  
+  // WRITING TOOLS PRIORITY BOOST
+  if (lowerSearchTerm.includes('writ') || lowerSearchTerm === 'write' || lowerSearchTerm === 'writing') {
+    if (tool.title.toLowerCase().includes('book writer')) {
+      score += 1500;
+    }
+    if (tool.title.toLowerCase().includes('script writer') || tool.title.toLowerCase().includes('screenplay')) {
+      score += 1400;
+    }
+    if (tool.title.toLowerCase().includes('playwriter')) {
+      score += 1350;
+    }
+    if (tool.title.toLowerCase().includes('article') || tool.title.toLowerCase().includes('rewriter')) {
+      score += 1300;
+    }
+    if (toolText.includes('writing') || toolText.includes('writer') || toolText.includes('author')) {
+      score += 1000;
+    }
+    if (tool.category?.toLowerCase().includes('writing') || tool.category?.toLowerCase().includes('content')) {
+      score += 900;
+    }
+  }
+  
+  // AGENT TOOLS PRIORITY BOOST
+  if (lowerSearchTerm.includes('agent')) {
+    if (tool.title.toLowerCase().includes('agent')) {
+      score += 1500;
+    }
+    if (toolText.includes('agent') || toolText.includes('autonomous') || toolText.includes('automation')) {
+      score += 1000;
+    }
+    if (tool.category?.toLowerCase().includes('agent')) {
+      score += 900;
     }
   }
   
