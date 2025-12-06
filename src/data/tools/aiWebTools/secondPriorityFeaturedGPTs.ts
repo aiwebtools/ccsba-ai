@@ -1,6 +1,6 @@
 
 import { Tool } from "@/types/tools";
-import { Bot, Brain, Clock, Microscope, Heart, Zap, Users, Crown, Sparkles, Globe, Star, Shield, Gamepad2, Eye, FileText, Leaf, Gem, Layers, GraduationCap, DollarSign, Ship, Compass } from "lucide-react";
+import { Bot, Brain, Clock, Microscope, Heart, Zap, Users, Crown, Sparkles, Globe, Star, Shield, Gamepad2, Eye, FileText, Leaf, Gem, Layers, GraduationCap, DollarSign, Ship, Compass, Sun } from "lucide-react";
 
 export const secondPriorityFeaturedGPTs: Tool[] = [
   {
@@ -186,5 +186,18 @@ export const secondPriorityFeaturedGPTs: Tool[] = [
     rating: 4.7,
     totalVotes: 4100,
     tags: ["archaeology", "indiana jones", "ancient texts", "historical research", "exploration"]
+  },
+  {
+    icon: Sun,
+    title: "Manicheism GPT - Some Lost Knowledge of the Light",
+    description: "The resurrected voice of prophet Mani—revealing the lost Light of a hunted faith. The prophet hunted by Rome lives again. By AiWebTools.Ai using the creator's recommended model: GPT-4o. Explore ancient Gnostic wisdom, suppressed religious teachings, and the dualistic philosophy of Light and Darkness that once rivaled Christianity.",
+    emoji: "☀️",
+    color: "from-amber-500 to-yellow-700",
+    category: "Spiritual & Philosophy AI Tools",
+    directUrl: "https://chatgpt.com/g/g-69345518771c81919c341622d3b742e5-manicheism-gpt-some-lost-knowledge-of-the-light",
+    imageUrl: "/images/manicheism-gpt.png",
+    rating: 4.8,
+    totalVotes: 3500,
+    tags: ["manicheism", "prophet mani", "gnostic", "ancient religion", "spiritual wisdom", "lost knowledge", "light", "rome", "suppressed teachings"]
   }
 ];
