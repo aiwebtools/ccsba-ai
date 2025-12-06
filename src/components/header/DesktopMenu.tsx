@@ -201,7 +201,8 @@ const DesktopMenu = () => {
                 <div className="mb-4 p-4 bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg border border-purple-500/30">
                   <p className="text-sm text-gray-300 leading-relaxed">
                     🔗 <span className="font-semibold text-cyan-400">Connect to Your Crypto Wallet</span><br/>
-                    Own forever • Resell for profit • Minted as NFT • Trade anytime
+                    Own forever • Resell for profit • Minted as NFT • Trade anytime<br/>
+                    <span className="text-green-400 font-semibold">🏦 NO BIO CHIP REQUIRED</span>
                   </p>
                 </div>
                 

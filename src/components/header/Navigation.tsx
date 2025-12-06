@@ -156,7 +156,8 @@ const Navigation = () => {
               <span className="text-lg">🔗</span> Connect to Your Crypto Wallet
             </h3>
             <p className="text-xs text-gray-300 leading-relaxed">
-              Own forever • Resell for profit • Minted as NFT • Connect to wallet • Trade anytime
+              Own forever • Resell for profit • Minted as NFT • Connect to wallet • Trade anytime<br/>
+              <span className="text-green-400 font-semibold">🏦 NO BIO CHIP REQUIRED</span>
             </p>
           </div>
           <Accordion type="multiple" className="space-y-3">
