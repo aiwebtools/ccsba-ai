@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, CalendarPlus } from "lucide-react";
+import { Button } from "./ui/button";
 
 const MeetingCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -35,6 +36,34 @@ const MeetingCountdown = () => {
     }
     
     return nextMeeting;
+  };
+
+  // Generate Google Calendar URL
+  const getGoogleCalendarUrl = () => {
+    const nextMeeting = getNextMeeting();
+    
+    // Create end time (1 hour after start)
+    const endMeeting = new Date(nextMeeting.getTime() + 60 * 60 * 1000);
+    
+    // Format dates for Google Calendar (YYYYMMDDTHHmmssZ format in UTC)
+    const formatDateForGoogle = (date: Date) => {
+      return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    };
+    
+    const startDate = formatDateForGoogle(nextMeeting);
+    const endDate = formatDateForGoogle(endMeeting);
+    
+    const title = encodeURIComponent("CCSBA Virtual Meeting");
+    const details = encodeURIComponent(
+      "Monthly CCSBA Virtual Meeting\n\n" +
+      "Join Zoom Meeting:\n" +
+      "https://us06web.zoom.us/j/81252494648?pwd=65oTtSJoFvsDKWlqzgw7ehYy1b7aby.1\n\n" +
+      "Meeting ID: 812 5249 4648\n" +
+      "Passcode: Dz9bQj"
+    );
+    const location = encodeURIComponent("Zoom Meeting");
+    
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}&sf=true&output=xml`;
   };
 
   useEffect(() => {
@@ -92,15 +121,28 @@ const MeetingCountdown = () => {
         ))}
       </div>
       
-      <a
-        href="https://us06web.zoom.us/j/81252494648?pwd=65oTtSJoFvsDKWlqzgw7ehYy1b7aby.1"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-green-500 to-lime-600 hover:from-green-400 hover:to-lime-500 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-      >
-        <Clock className="w-5 h-5" />
-        Join Zoom Meeting
-      </a>
+      <div className="flex flex-col sm:flex-row gap-3">
+        <a
+          href="https://us06web.zoom.us/j/81252494648?pwd=65oTtSJoFvsDKWlqzgw7ehYy1b7aby.1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-lime-600 hover:from-green-400 hover:to-lime-500 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+        >
+          <Clock className="w-5 h-5" />
+          Join Zoom Meeting
+        </a>
+        
+        <a
+          href={getGoogleCalendarUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+          title="Add to Google Calendar"
+        >
+          <CalendarPlus className="w-5 h-5" />
+          <span className="sm:inline">Add to Calendar</span>
+        </a>
+      </div>
       
       <div className="mt-3 text-center text-xs text-green-300/80">
         Meeting ID: 812 5249 4648 • Passcode: Dz9bQj
