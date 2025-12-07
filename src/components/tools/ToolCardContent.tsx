@@ -6,6 +6,9 @@ import { Tool } from "@/types/tools";
 import ToolCardMedia from "./ToolCardMedia";
 import { createTimePortalEffect } from "@/utils/timeEffects";
 import { generateToolSlug } from "@/utils/urlGenerator";
+import SpiritualDisclaimer from "@/components/SpiritualDisclaimer";
+import MedicalDisclaimer from "@/components/MedicalDisclaimer";
+import { requiresSpiritualDisclaimer, requiresMedicalDisclaimer } from "@/utils/toolDisclaimerUtils";
 
 interface ToolCardContentProps {
   tool: Tool;
@@ -62,6 +65,10 @@ Best regards`);
     window.open(mailtoLink, '_blank');
   };
 
+  // Check for special disclaimers
+  const needsSpiritualDisclaimer = requiresSpiritualDisclaimer(tool);
+  const needsMedicalDisclaimer = requiresMedicalDisclaimer(tool);
+
   return (
     <CardContent className="text-center flex-grow flex flex-col relative z-10">
       <ToolCardMedia 
@@ -70,9 +77,13 @@ Best regards`);
         imageHeight={imageHeight} 
       />
       
-      <CardDescription className={`${isAIWebToolsOriginal ? 'text-cyan-100' : 'text-gray-300'} mb-4 leading-relaxed text-sm flex-grow`}>
+      <CardDescription className={`${isAIWebToolsOriginal ? 'text-cyan-100' : 'text-gray-300'} mb-2 leading-relaxed text-sm flex-grow`}>
         {getDescription()}
       </CardDescription>
+      
+      {/* Compact disclaimers on cards */}
+      {needsSpiritualDisclaimer && <SpiritualDisclaimer tool={tool} variant="compact" />}
+      {needsMedicalDisclaimer && <MedicalDisclaimer tool={tool} variant="compact" />}
       
       <div className="mt-auto space-y-2">
         {/* View Details Button - now uses clean URL slug */}
