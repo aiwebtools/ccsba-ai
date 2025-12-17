@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, Grid3X3, Star, Mail, ArrowRight, Heart, Zap, Globe, Users, Leaf, Shield, Target, HandHeart } from "lucide-react";
+import { Search, Grid3X3, Star, Mail, ArrowRight, Heart, Zap, Globe, Users, Leaf, Shield, Target, HandHeart, Calendar, UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Header from "@/components/Header";
@@ -111,14 +111,70 @@ Best regards,
                 Who We Are
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-gray-300 font-light mb-4">
-                <span className="text-green-400 font-bold">CCSBA</span> (Connecticut Cannabis Small Business Alliance) is a <span className="text-lime-400 font-semibold">non-profit organization</span> dedicated to supporting and empowering cannabis businesses throughout Connecticut.
+                <span className="text-green-400 font-bold">CCSBA</span> (Connecticut Cannabis Small Business Alliance) is a <span className="text-lime-400 font-semibold">non-profit organization</span> dedicated to providing <span className="text-cyan-400 font-semibold">education, informational resources, and tools</span> for our members in Connecticut's cannabis industry.
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-gray-300 font-light">
-                We serve our community—from consumers and entrepreneurs to cultivators and industry leaders—providing the resources, education, and advocacy needed to thrive in Connecticut's cannabis industry.
+                We empower cannabis businesses—from entrepreneurs and cultivators to dispensary owners and industry professionals—through knowledge sharing, networking, and access to cutting-edge resources.
               </p>
             </div>
 
             <Separator className="bg-green-500/20" />
+
+            {/* Leadership Section */}
+            <div className="bg-gradient-to-r from-blue-900/30 to-green-900/30 backdrop-blur-sm border border-blue-500/30 rounded-lg p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-400 flex items-center justify-center">
+                  <UserCircle className="w-8 h-8 mr-3" />
+                  Our Leadership
+                </h2>
+              </div>
+              <div className="bg-black/50 border border-blue-500/30 rounded-lg p-6 text-center mb-6">
+                <p className="text-lg text-gray-300 mb-2">Current Chairman</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-green-400 mb-4">Michael Goodenough</h3>
+                <p className="text-gray-400 mb-6">Leading CCSBA's mission to empower Connecticut cannabis businesses through education, resources, and community building.</p>
+                <Button 
+                  onClick={(e) => handleExternalLink("https://ctcannabisalliance.org/meet-the-board", e as any)}
+                  className="bg-blue-600 hover:bg-blue-500 text-white font-semibold"
+                >
+                  <Users className="w-4 h-4 mr-2" />
+                  Meet the Board
+                </Button>
+              </div>
+            </div>
+
+            {/* Monthly Meetings Section */}
+            <div className="bg-gradient-to-r from-purple-900/30 to-green-900/30 backdrop-blur-sm border border-purple-500/30 rounded-lg p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-purple-400 flex items-center">
+                <Calendar className="w-8 h-8 mr-3" />
+                Monthly Networking Meetings
+              </h2>
+              <p className="text-lg leading-relaxed text-gray-300 mb-6">
+                CCSBA hosts <span className="text-purple-400 font-semibold">monthly networking meetings</span> for our members—either <span className="text-cyan-400 font-semibold">virtually or in-person</span>. These gatherings provide opportunities to:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-black/40 border border-purple-500/20 rounded-lg p-4">
+                  <p className="text-gray-300">🤝 <span className="text-green-400 font-medium">Connect</span> with fellow cannabis professionals</p>
+                </div>
+                <div className="bg-black/40 border border-purple-500/20 rounded-lg p-4">
+                  <p className="text-gray-300">📚 <span className="text-green-400 font-medium">Learn</span> from industry experts and guest speakers</p>
+                </div>
+                <div className="bg-black/40 border border-purple-500/20 rounded-lg p-4">
+                  <p className="text-gray-300">💡 <span className="text-green-400 font-medium">Share</span> knowledge, experiences, and best practices</p>
+                </div>
+                <div className="bg-black/40 border border-purple-500/20 rounded-lg p-4">
+                  <p className="text-gray-300">🌱 <span className="text-green-400 font-medium">Grow</span> your network and business opportunities</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <Button 
+                  onClick={(e) => handleExternalLink("https://ctcannabisalliance.org", e as any)}
+                  className="bg-purple-600 hover:bg-purple-500 text-white font-semibold"
+                >
+                  <Calendar className="w-4 h-4 mr-2" />
+                  View Upcoming Meetings
+                </Button>
+              </div>
+            </div>
 
             {/* Our Mission */}
             <div className="bg-gradient-to-r from-green-900/50 to-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-8">
@@ -127,36 +183,36 @@ Best regards,
                 Our Mission
               </h2>
               <p className="text-lg leading-relaxed text-gray-300 mb-6">
-                CCSBA's mission is to <span className="text-green-400 font-semibold">empower Connecticut cannabis businesses</span> through:
+                CCSBA's mission is to provide <span className="text-green-400 font-semibold">education, informational resources, and tools</span> to empower Connecticut cannabis businesses through:
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/40 border border-green-500/20 rounded-lg p-5">
                   <div className="flex items-center mb-3">
-                    <Users className="w-6 h-6 text-green-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-green-300">Community Building</h3>
+                    <Zap className="w-6 h-6 text-lime-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-lime-300">Education & Information</h3>
                   </div>
-                  <p className="text-gray-400">Connecting cannabis professionals, sharing knowledge, and fostering collaboration across Connecticut.</p>
+                  <p className="text-gray-400">Providing educational resources, training materials, and informational tools to help members navigate and succeed in the cannabis industry.</p>
                 </div>
                 <div className="bg-black/40 border border-green-500/20 rounded-lg p-5">
                   <div className="flex items-center mb-3">
-                    <Zap className="w-6 h-6 text-lime-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-lime-300">Education & Resources</h3>
+                    <Users className="w-6 h-6 text-green-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-green-300">Networking & Community</h3>
                   </div>
-                  <p className="text-gray-400">Providing tools, training, and educational resources to help businesses grow and succeed.</p>
+                  <p className="text-gray-400">Monthly meetings (virtual and in-person) connecting cannabis professionals, fostering collaboration, and building a supportive community.</p>
                 </div>
                 <div className="bg-black/40 border border-green-500/20 rounded-lg p-5">
                   <div className="flex items-center mb-3">
                     <Shield className="w-6 h-6 text-green-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-green-300">Advocacy</h3>
+                    <h3 className="text-lg font-semibold text-green-300">Member Resources</h3>
                   </div>
-                  <p className="text-gray-400">Representing the interests of small cannabis businesses in policy discussions and legislative matters.</p>
+                  <p className="text-gray-400">Access to AI-powered tools, industry insights, compliance guidance, and business development resources exclusively for members.</p>
                 </div>
                 <div className="bg-black/40 border border-green-500/20 rounded-lg p-5">
                   <div className="flex items-center mb-3">
                     <Leaf className="w-6 h-6 text-lime-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-lime-300">Industry Growth</h3>
+                    <h3 className="text-lg font-semibold text-lime-300">Industry Advocacy</h3>
                   </div>
-                  <p className="text-gray-400">Supporting sustainable growth and innovation within Connecticut's cannabis industry.</p>
+                  <p className="text-gray-400">Representing the interests of small cannabis businesses and advocating for fair policies in Connecticut's cannabis market.</p>
                 </div>
               </div>
             </div>
