@@ -1,6 +1,6 @@
 
 import { createTimePortalEffect } from "@/utils/timeEffects";
-import cannabisLeaf from "@/assets/cannabis-leaf-logo.png";
+import ccsbaLogo from "@/assets/ccsba-official-logo.png";
 
 const FooterCompanyInfo = () => {
   const handleExternalLink = (url: string, e: React.MouseEvent) => {
@@ -15,7 +15,7 @@ const FooterCompanyInfo = () => {
       {/* CCSBA Logo section */}
       <div className="text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <img src={cannabisLeaf} alt="CCSBA" className="w-12 h-12 drop-shadow-lg" />
+          <img src={ccsbaLogo} alt="CCSBA - CT Cannabis Small Business Alliance" className="h-14 w-auto drop-shadow-lg brightness-110" />
           <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 via-lime-500 to-green-600 bg-clip-text text-transparent glow-text-effect">
             CCSBA AI TOOLS
           </div>
