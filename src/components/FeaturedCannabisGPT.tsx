@@ -122,10 +122,10 @@ const FeaturedCannabisGPT = () => {
               <div className="aspect-video rounded-xl overflow-hidden border-2 border-green-500/40 shadow-lg shadow-green-500/20">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/qzndRzBtrEU?rel=0&modestbranding=1"
+                  src="https://player.vimeo.com/video/1132373393?badge=0&autopause=0&player_id=0&app_id=58479"
                   title="Cannabis GPT - CCSBA Featured Tool"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                   allowFullScreen
                   loading="lazy"
                 />
