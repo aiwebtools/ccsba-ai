@@ -2,7 +2,7 @@
 import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { createTimePortalEffect } from "@/utils/timeEffects";
-import ccsbaLogo from "@/assets/ccsba-logo.png";
+import ccsbaLogo from "@/assets/ccsba-official-logo.png";
 
 const Logo = ({ compact = false }: { compact?: boolean }) => {
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ const Logo = ({ compact = false }: { compact?: boolean }) => {
       {/* Cannabis Leaf Logo */}
       <img 
         src={ccsbaLogo} 
-        alt="CCSBA"
-        className={`${compact ? 'w-10 h-10' : 'w-14 h-14'} drop-shadow-lg`}
+        alt="CCSBA - CT Cannabis Small Business Alliance"
+        className={`${compact ? 'h-10 w-auto' : 'h-14 w-auto'} drop-shadow-lg brightness-110`}
       />
       
       <div className="text-left flex-1">
