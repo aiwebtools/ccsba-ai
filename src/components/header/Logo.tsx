@@ -2,7 +2,7 @@
 import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { createTimePortalEffect } from "@/utils/timeEffects";
-import cannabisLeaf from "@/assets/cannabis-leaf-logo.png";
+import ccsbaLogo from "@/assets/ccsba-logo.png";
 
 const Logo = ({ compact = false }: { compact?: boolean }) => {
   const navigate = useNavigate();
@@ -29,9 +29,9 @@ const Logo = ({ compact = false }: { compact?: boolean }) => {
     <div className={`flex items-center gap-2 flex-shrink-0 relative z-[110] ${compact ? 'scale-75' : ''}`}>
       {/* Cannabis Leaf Logo */}
       <img 
-        src={cannabisLeaf} 
+        src={ccsbaLogo} 
         alt="CCSBA"
-        className={`${compact ? 'w-8 h-8' : 'w-12 h-12'} drop-shadow-lg`}
+        className={`${compact ? 'w-10 h-10' : 'w-14 h-14'} drop-shadow-lg`}
       />
       
       <div className="text-left flex-1">
