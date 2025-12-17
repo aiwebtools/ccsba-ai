@@ -12,9 +12,9 @@ interface SEOMetaTagsProps {
 }
 
 const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
-  title = "AI Web Tools - #1 AI Tools Directory | 1300+ Best AI Tools 2025",
-  description = "Discover the world's largest directory of AI tools for productivity, creativity, and business. Find the perfect AI tool for any task with our comprehensive collection of 1300+ AI tools.",
-  keywords = ['ai tools', 'artificial intelligence', 'productivity tools', 'ai directory', 'ai web tools'],
+  title = "CCSBA Cannabis AI Tool Portal | Connecticut Cannabis Small Business Alliance | 2195+ AI Tools",
+  description = "CCSBA Cannabis AI Tool Portal - Connecticut Cannabis Small Business Alliance. 2195+ AI tools to help cannabis businesses flourish. Platform designed & donated by AIWebTools.AI. Together we grow!",
+  keywords = ['CCSBA', 'Connecticut Cannabis Small Business Alliance', 'cannabis ai tools', 'cannabis business tools', 'ai tools', 'artificial intelligence', 'ai directory', 'AIWebTools.AI'],
   url = '/',
   image = '/og-image.png',
   type = 'website',
@@ -40,7 +40,7 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="AI Web Tools" />
+      <meta property="og:site_name" content="CCSBA Cannabis AI Tool Portal" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@aiwebtools" />
+      <meta name="twitter:creator" content="@CCSBA_CT" />
       
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -74,9 +74,9 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       )}
       
       {/* Additional Meta for better crawling */}
-      <meta name="author" content="AI Web Tools" />
-      <meta name="publisher" content="AI Web Tools" />
-      <meta name="copyright" content="AI Web Tools" />
+      <meta name="author" content="CCSBA - Platform by AIWebTools.AI" />
+      <meta name="publisher" content="Connecticut Cannabis Small Business Alliance (CCSBA)" />
+      <meta name="copyright" content="© 2025 CCSBA. Platform donated by AIWebTools.AI" />
       <meta name="revisit-after" content="1 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
