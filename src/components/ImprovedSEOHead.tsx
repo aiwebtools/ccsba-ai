@@ -18,13 +18,13 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
   const getTitle = () => {
     switch (pageType) {
       case 'tool':
-        return `${tool?.title} - ${tool?.category || 'AI Tool'} | Free AI Tool Access`;
+        return `${tool?.title} - ${tool?.category || 'AI Tool'} | CCSBA Cannabis AI Portal`;
       case 'category':
-        return `${category} AI Tools - Best ${category} Tools 2025 | AI Web Tools`;
+        return `${category} AI Tools - Best ${category} Tools 2025 | CCSBA Cannabis AI Portal`;
       case 'search':
-        return `${searchTerm} AI Tools - Search Results | AI Web Tools Directory`;
+        return `${searchTerm} AI Tools - Search Results | CCSBA Cannabis AI Portal`;
       default:
-        return 'AI Web Tools - #1 AI Tools Directory | 2195+ Best AI Tools 2025';
+        return 'CCSBA Cannabis AI Tool Portal | Connecticut Cannabis Small Business Alliance | 2195+ AI Tools';
     }
   };
 
@@ -33,28 +33,28 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
       case 'tool':
         const toolDesc = tool?.description || 'Powerful AI tool for enhanced productivity and creativity';
         const truncatedDesc = toolDesc.length > 150 ? toolDesc.substring(0, 150) + '...' : toolDesc;
-        return `${truncatedDesc} Try ${tool?.title} now - Free access to this ${tool?.category || 'AI'} tool. Get started instantly!`;
+        return `${truncatedDesc} Try ${tool?.title} now - Free access via CCSBA Cannabis AI Portal. Platform donated by AIWebTools.AI.`;
       case 'category':
-        return `Discover the best ${category?.toLowerCase()} AI tools for 2025. Compare features, pricing, and reviews of top ${category?.toLowerCase()} tools in our comprehensive directory.`;
+        return `Discover the best ${category?.toLowerCase()} AI tools for cannabis businesses. CCSBA Cannabis AI Portal - platform donated by AIWebTools.AI to empower cannabis industry professionals.`;
       case 'search':
-        return `Find the best AI tools for "${searchTerm}". Browse our comprehensive directory of AI tools with reviews, features, and direct access links.`;
+        return `Find the best AI tools for "${searchTerm}" on CCSBA Cannabis AI Portal. Free platform donated by AIWebTools.AI to support cannabis business growth.`;
       default:
-        return 'Discover the world\'s largest directory of 2195+ AI tools for productivity, creativity, and business. Find the perfect AI tool for any task with our comprehensive collection updated daily.';
+        return 'CCSBA Cannabis AI Tool Portal - Connecticut Cannabis Small Business Alliance. 2195+ AI tools to help cannabis businesses flourish. Platform designed & donated by AIWebTools.AI. Together we grow!';
     }
   };
 
   const getKeywords = () => {
-    const baseKeywords = ['ai tools', 'artificial intelligence', 'ai directory', 'best ai tools 2025'];
+    const baseKeywords = ['CCSBA', 'Connecticut Cannabis Small Business Alliance', 'cannabis ai tools', 'cannabis business tools', 'ai tools', 'artificial intelligence', 'ai directory', 'best ai tools 2025', 'AIWebTools.AI'];
     
     switch (pageType) {
       case 'tool':
         return [...baseKeywords, tool?.title?.toLowerCase(), tool?.category?.toLowerCase(), ...tool?.tags || []];
       case 'category':
-        return [...baseKeywords, `${category?.toLowerCase()} ai tools`, `best ${category?.toLowerCase()} tools`];
+        return [...baseKeywords, `${category?.toLowerCase()} ai tools`, `best ${category?.toLowerCase()} tools`, 'cannabis industry'];
       case 'search':
         return [...baseKeywords, searchTerm?.toLowerCase(), `${searchTerm} ai tools`];
       default:
-        return [...baseKeywords, 'ai web tools', 'productivity tools', 'creative ai'];
+        return [...baseKeywords, 'cannabis business growth', 'together we grow', 'cannabis member portal'];
     }
   };
 
@@ -99,9 +99,14 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": pageType === 'tool' ? "SoftwareApplication" : "WebSite",
-    "name": pageType === 'tool' ? tool?.title : "AI Web Tools",
+    "name": pageType === 'tool' ? tool?.title : "CCSBA Cannabis AI Tool Portal",
     "description": getDescription(),
     "url": getCanonicalUrl(),
+    "creator": {
+      "@type": "Organization",
+      "name": "AIWebTools.AI",
+      "description": "Platform designed and donated by AIWebTools.AI"
+    },
     ...(pageType === 'tool' && {
       "applicationCategory": tool?.category || "Artificial Intelligence",
       "operatingSystem": "Web Browser",
@@ -201,9 +206,9 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
       <meta name="format-detection" content="telephone=no" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="AI Web Tools" />
+      <meta name="apple-mobile-web-app-title" content="CCSBA Cannabis AI Portal" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="theme-color" content="#06b6d4" />
+      <meta name="theme-color" content="#22c55e" />
       
       {/* Enhanced Open Graph - Tool-Specific */}
       <meta property="og:type" content={pageType === 'tool' ? 'product' : 'website'} />
@@ -213,8 +218,8 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
       <meta property="og:image" content={getOgImage()} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={pageType === 'tool' ? `${tool?.title} - ${tool?.category || 'AI Tool'} Preview` : `${getTitle()} - AI Web Tools Preview`} />
-      <meta property="og:site_name" content="AI Web Tools" />
+      <meta property="og:image:alt" content={pageType === 'tool' ? `${tool?.title} - ${tool?.category || 'AI Tool'} Preview` : `CCSBA Cannabis AI Tool Portal - Connecticut Cannabis Small Business Alliance`} />
+      <meta property="og:site_name" content="CCSBA Cannabis AI Tool Portal" />
       <meta property="og:locale" content="en_US" />
       {pageType === 'tool' && tool && (
         <>
@@ -231,8 +236,8 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
       <meta name="twitter:title" content={getTitle()} />
       <meta name="twitter:description" content={getDescription()} />
       <meta name="twitter:image" content={getOgImage()} />
-      <meta name="twitter:image:alt" content={pageType === 'tool' ? `Try ${tool?.title} - ${tool?.category || 'AI Tool'}` : `${getTitle()} - AI Web Tools Preview`} />
-      <meta name="twitter:site" content="@aiwebtools" />
+      <meta name="twitter:image:alt" content={pageType === 'tool' ? `Try ${tool?.title} - ${tool?.category || 'AI Tool'}` : `CCSBA Cannabis AI Tool Portal`} />
+      <meta name="twitter:site" content="@CCSBA_CT" />
       <meta name="twitter:creator" content="@aiwebtools" />
       {pageType === 'tool' && tool && (
         <>
@@ -244,9 +249,9 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
       )}
       
       {/* Additional SEO Meta */}
-      <meta name="author" content="AI Web Tools" />
-      <meta name="publisher" content="AI Web Tools" />
-      <meta name="copyright" content="© 2025 AI Web Tools. All rights reserved." />
+      <meta name="author" content="CCSBA - Platform by AIWebTools.AI" />
+      <meta name="publisher" content="Connecticut Cannabis Small Business Alliance (CCSBA)" />
+      <meta name="copyright" content="© 2025 CCSBA. Platform donated by AIWebTools.AI. All rights reserved." />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="1 day" />
       <meta name="distribution" content="global" />
@@ -274,24 +279,28 @@ const ImprovedSEOHead: React.FC<ImprovedSEOHeadProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "AI Web Tools",
+          "name": "CCSBA - Connecticut Cannabis Small Business Alliance",
+          "alternateName": "CCSBA",
           "url": "https://aitools.studio",
           "logo": "https://aitools.studio/logo.png",
-          "description": "The world's largest directory of 2195+ AI tools for productivity, creativity, and business.",
+          "description": "CCSBA Cannabis AI Tool Portal - 2195+ AI tools to help cannabis businesses flourish. Platform designed and donated by AIWebTools.AI. Together we grow!",
           "foundingDate": "2023",
-          "numberOfEmployees": {
-            "@type": "QuantitativeValue",
-            "value": "10-50"
+          "nonprofitStatus": "Nonprofit501c6",
+          "sponsor": {
+            "@type": "Organization",
+            "name": "AIWebTools.AI",
+            "description": "Platform designed and donated by AIWebTools.AI"
           },
           "sameAs": [
-            "https://twitter.com/aiwebtools",
-            "https://facebook.com/aiwebtools"
+            "https://twitter.com/CCSBA_CT",
+            "https://aiwebtools.ai"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "contactType": "customer support",
+            "contactType": "member support",
             "availableLanguage": ["English"]
-          }
+          },
+          "slogan": "Together We Grow"
         })}
       </script>
     </Helmet>
