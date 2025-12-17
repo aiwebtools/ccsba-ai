@@ -26,8 +26,15 @@ const FooterCompanyInfo = () => {
         <div className="text-xs md:text-sm text-gray-300 mt-2">
           Non-Profit Educational Organization
         </div>
-        <div className="text-xs md:text-sm text-gray-400 mt-1">
-          Technology Platform by{" "}
+        <div className="text-xs md:text-sm text-gray-400 mt-1 flex flex-wrap items-center justify-center gap-1">
+          <button 
+            onClick={(e) => handleExternalLink("https://ctcannabisalliance.org", e)}
+            className="text-green-400 hover:text-green-300 transition-colors underline"
+          >
+            CTCannabisAlliance.org
+          </button>
+          <span>|</span>
+          <span>Platform by</span>
           <button 
             onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e)}
             className="text-green-400 hover:text-green-300 transition-colors underline"

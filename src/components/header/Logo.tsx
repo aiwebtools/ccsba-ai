@@ -46,7 +46,14 @@ const Logo = ({ compact = false }: { compact?: boolean }) => {
               <span className="text-green-200/60 font-light tracking-wider">CONNECTICUT CANNABIS SMALL BUSINESS ALLIANCE</span>
             </div>
             <div className="text-xs text-gray-400 mt-0.5">
-              BY{" "}
+              <button 
+                onClick={(e) => handleExternalLink("https://ctcannabisalliance.org", e)}
+                className="text-green-400 hover:text-green-300 transition-all duration-200 hover:text-shadow-glow font-medium tracking-wide"
+              >
+                CTCANNABISALLIANCE.ORG
+              </button>
+              {" | "}
+              <span className="text-gray-500">BY</span>{" "}
               <button 
                 onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e)}
                 className="text-green-400 hover:text-green-300 transition-all duration-200 hover:text-shadow-glow font-medium tracking-wide"
