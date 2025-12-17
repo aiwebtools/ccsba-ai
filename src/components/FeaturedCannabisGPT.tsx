@@ -31,7 +31,7 @@ const FeaturedCannabisGPT = () => {
       <div className="flex justify-center mb-4">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/40 rounded-full">
           <Sparkles className="w-4 h-4 text-green-400 animate-pulse" />
-          <span className="text-green-300 text-sm font-semibold uppercase tracking-wider">CCSBA'S #1 FEATURED EDUCATIONAL TOOL</span>
+          <span className="text-green-300 text-sm font-semibold uppercase tracking-wider">CCSBA'S #1 FEATURED EDUCATIONAL AI TOOL</span>
           <Sparkles className="w-4 h-4 text-green-400 animate-pulse" />
         </div>
       </div>
