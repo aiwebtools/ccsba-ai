@@ -19,7 +19,7 @@ import NotFound from "./pages/NotFound";
 import DisclaimersPage from "./pages/DisclaimersPage";
 import OurStoryPage from "./pages/OurStoryPage";
 import FloatingCloneButton from "./components/FloatingCloneButton";
-import WelcomeVoiceSystem from "./components/WelcomeVoiceSystem";
+
 import AIToolsHub from "./pages/AIToolsHub";
 import AIAgentsDirectory from "./pages/AIAgentsDirectory";
 import ChatGPTAlternatives from "./pages/ChatGPTAlternatives";
@@ -40,7 +40,7 @@ function App() {
           <FavoritesProvider>
             <TooltipProvider>
               <Toaster />
-              <WelcomeVoiceSystem />
+              
               <BrowserRouter>
                 <Routes>
                   <Route path="/" element={<Index />} />
