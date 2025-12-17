@@ -35,8 +35,8 @@ const FloatingCloneButton = () => {
 
   return (
     <div
-      className={`fixed left-2 top-56 sm:top-64 md:top-28 z-50 transition-all duration-300 ${
-        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
+      className={`fixed bottom-24 right-6 z-50 transition-all duration-300 ${
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
       }`}
     >
       <a
@@ -49,29 +49,33 @@ const FloatingCloneButton = () => {
           console.log('🌀 Clone Website Button clicked - triggering time warp');
           createTimePortalEffect('https://lovable.dev/projects/e2ddf9b0-bb19-44f8-ae1a-05e469735dad?via=aiwebtools', 'Clone AI Web Tools');
         }}
-        className="group bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-600 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-500 text-white w-14 h-14 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex flex-col items-center justify-center relative overflow-hidden"
+        className="group bg-gradient-to-br from-green-500 via-lime-500 to-green-600 hover:from-green-400 hover:via-lime-400 hover:to-green-500 text-white w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex flex-col items-center justify-center relative overflow-hidden border-2 border-green-300/50"
         style={{ 
-          boxShadow: '0 8px 32px rgba(6, 182, 212, 0.4), 0 4px 16px rgba(59, 130, 246, 0.3)',
+          boxShadow: '0 8px 32px rgba(34, 197, 94, 0.5), 0 4px 16px rgba(132, 204, 22, 0.4)',
           backdropFilter: 'blur(8px)',
         }}
-        title="Clone This AI Tools Website"
+        title="Clone This AI Tools Website - FREE"
       >
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-600/20 animate-pulse rounded-full" />
+        {/* Animated background pulse */}
+        <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-lime-400/30 to-green-500/30 animate-pulse rounded-full" />
         
         {/* Content */}
         <div className="relative flex flex-col items-center justify-center text-center">
-          <Copy className="w-3 h-3 group-hover:animate-bounce mb-0.5" />
-          <div className="text-[7px] font-bold leading-none">
+          <Copy className="w-5 h-5 group-hover:animate-bounce mb-0.5" />
+          <div className="text-[8px] font-bold leading-tight">
             <div>CLONE</div>
-            <div>SITE</div>
             <div>FREE</div>
           </div>
         </div>
         
         {/* Shine effect on hover */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-700 rounded-full" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-700 rounded-full" />
       </a>
+      
+      {/* Tooltip on hover */}
+      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/95 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-green-500/40 pointer-events-none">
+        🌿 Clone This Website FREE
+      </span>
     </div>
   );
 };
