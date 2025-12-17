@@ -5,7 +5,40 @@ import { sortGPTsByPowerRanking } from "./gptPowerRanking";
  * Utility functions to prioritize AI Web Tools GPTs with videos/images
  * These tools should appear first in all categories and sections
  * Now enhanced with power ranking system
+ * CCSBA Focus: Cannabis and small business tools prioritized for members
  */
+
+// Cannabis-related keywords for CCSBA member prioritization
+const CANNABIS_KEYWORDS = [
+  'cannabis', 'hemp', 'cbd', 'marijuana', 'weed', 'dispensary', 'cultivation',
+  'grower', 'grow', 'strain', 'terpene', 'cannabinoid', 'thc', 'greenleaf'
+];
+
+// Small business keywords for CCSBA member prioritization
+const SMALL_BUSINESS_KEYWORDS = [
+  'business', 'entrepreneur', 'startup', 'small business', 'company', 'enterprise',
+  'marketing', 'sales', 'finance', 'accounting', 'tax', 'invoice', 'budget',
+  'business plan', 'grant', 'funding', 'loan', 'profit', 'revenue', 'client',
+  'customer', 'contract', 'legal', 'compliance', 'training', 'manual', 'employee',
+  'hiring', 'hr', 'payroll', 'inventory', 'supply chain', 'logistics', 'retail',
+  'e-commerce', 'store', 'shop', 'market', 'brand', 'advertising', 'social media',
+  'website', 'seo', 'analytics', 'crm', 'proposal', 'pitch', 'investor', 'microsaas'
+];
+
+// Check if tool is cannabis-related (highest priority for CCSBA)
+export const isCannabisRelated = (tool: Tool): boolean => {
+  const searchText = `${tool.title} ${tool.description} ${tool.category || ''} ${tool.tags?.join(' ') || ''}`.toLowerCase();
+  return CANNABIS_KEYWORDS.some(keyword => searchText.includes(keyword)) ||
+         tool.title.toLowerCase().includes('cannabis') ||
+         tool.title.toLowerCase().includes('fungus') ||
+         tool.title.toLowerCase().includes('hemp');
+};
+
+// Check if tool is small business related (high priority for CCSBA members)
+export const isSmallBusinessRelated = (tool: Tool): boolean => {
+  const searchText = `${tool.title} ${tool.description} ${tool.category || ''} ${tool.tags?.join(' ') || ''}`.toLowerCase();
+  return SMALL_BUSINESS_KEYWORDS.some(keyword => searchText.includes(keyword));
+};
 
 // Check if tool is an AI Web Tools GPT
 export const isAIWebToolsGPT = (tool: Tool): boolean => {
@@ -145,32 +178,53 @@ export const getAIWebToolsPriorityScore = (tool: Tool, searchTerm?: string): num
 };
 
 // Apply prioritization to any tool array (enhanced with power ranking)
+// CCSBA FOCUS: Cannabis and small business tools prioritized for members
 export const applyAIWebToolsPrioritization = (tools: Tool[]): Tool[] => {
   if (!tools || tools.length === 0) return tools;
   
-  console.log(`🔧 PRIORITIZATION: Processing ${tools.length} tools`);
+  console.log(`🔧 PRIORITIZATION: Processing ${tools.length} tools for CCSBA members`);
   
-  const soulMapGPTs = tools.filter(isSoulMapGPT);
-  const priorityGPTs = tools.filter(tool => isPriorityAIWebToolsGPT(tool) && !isSoulMapGPT(tool));
-  const otherAIWebToolsGPTs = tools.filter(tool => isAIWebToolsGPT(tool) && !isPriorityAIWebToolsGPT(tool) && !isSoulMapGPT(tool));
+  // CCSBA Priority Categories - Cannabis and Small Business FIRST
+  const cannabisTools = tools.filter(tool => isCannabisRelated(tool) && isAIWebToolsGPT(tool));
+  const smallBusinessTools = tools.filter(tool => 
+    isSmallBusinessRelated(tool) && isAIWebToolsGPT(tool) && !isCannabisRelated(tool)
+  );
+  
+  // Standard priority categories (excluding already categorized)
+  const alreadyCategorized = new Set([...cannabisTools, ...smallBusinessTools].map(t => t.title));
+  
+  const soulMapGPTs = tools.filter(tool => isSoulMapGPT(tool) && !alreadyCategorized.has(tool.title));
+  const priorityGPTs = tools.filter(tool => 
+    isPriorityAIWebToolsGPT(tool) && !isSoulMapGPT(tool) && !alreadyCategorized.has(tool.title)
+  );
+  const otherAIWebToolsGPTs = tools.filter(tool => 
+    isAIWebToolsGPT(tool) && !isPriorityAIWebToolsGPT(tool) && 
+    !isSoulMapGPT(tool) && !alreadyCategorized.has(tool.title)
+  );
   const toolsWithMedia = tools.filter(tool => !isAIWebToolsGPT(tool) && hasVideoOrImageMedia(tool));
   const otherTools = tools.filter(tool => !isAIWebToolsGPT(tool) && !hasVideoOrImageMedia(tool));
   
+  console.log(`🌿 CCSBA Cannabis Tools: ${cannabisTools.length}`);
+  console.log(`💼 CCSBA Small Business Tools: ${smallBusinessTools.length}`);
   console.log(`🔮 Soul Map GPTs: ${soulMapGPTs.length}`);
   console.log(`🎬 Priority GPTs (with media): ${priorityGPTs.length}`);
   console.log(`🚀 Other AI Web Tools GPTs: ${otherAIWebToolsGPTs.length}`);
   console.log(`📺 Third-party tools with media: ${toolsWithMedia.length}`);
   console.log(`📝 Other tools: ${otherTools.length}`);
   
-  // Log some examples of priority GPTs with media
-  if (priorityGPTs.length > 0) {
-    console.log(`🎥 TOP PRIORITY GPTs with videos/images:`, 
-      priorityGPTs.slice(0, 10).map(t => `${t.title} (${t.videoUrl ? 'VIDEO' : ''}${t.imageUrl ? ' IMAGE' : ''})`));
+  // Log cannabis tools for verification
+  if (cannabisTools.length > 0) {
+    console.log(`🌿 TOP CANNABIS TOOLS:`, cannabisTools.slice(0, 5).map(t => t.title));
+  }
+  
+  // Log small business tools for verification
+  if (smallBusinessTools.length > 0) {
+    console.log(`💼 TOP SMALL BUSINESS TOOLS:`, smallBusinessTools.slice(0, 5).map(t => t.title));
   }
   
   // Sort each AI Web Tools group - videos/images first within power tiers
   const sortAIWebToolsByMediaAndPower = (toolsArray: Tool[]) => {
-    return toolsArray.sort((a, b) => {
+    return [...toolsArray].sort((a, b) => {
       // First priority: tools with videos/images
       const aHasMedia = hasVideoOrImageMedia(a);
       const bHasMedia = hasVideoOrImageMedia(b);
@@ -185,24 +239,33 @@ export const applyAIWebToolsPrioritization = (tools: Tool[]): Tool[] => {
   
   // Sort non-AI Web Tools by rating and title only
   const sortByRatingAndTitle = (toolsArray: Tool[]) => 
-    toolsArray.sort((a, b) => {
+    [...toolsArray].sort((a, b) => {
       const ratingDiff = (b.rating || 0) - (a.rating || 0);
       if (ratingDiff !== 0) return ratingDiff;
       return a.title.localeCompare(b.title);
     });
   
+  // CCSBA MEMBER PRIORITY ORDER:
+  // 1. Cannabis tools (most relevant to CCSBA members)
+  // 2. Small business tools (help members grow their businesses)
+  // 3. Soul Map GPT
+  // 4. Priority GPTs with media
+  // 5. Other AI Web Tools
+  // 6. Third-party tools with media
+  // 7. Everything else
   const finalResult = [
-    ...sortAIWebToolsByMediaAndPower(soulMapGPTs),         // Soul Map GPT always first!
-    ...sortAIWebToolsByMediaAndPower(priorityGPTs),        // AI Web Tools with media (videos/images first)
-    ...sortAIWebToolsByMediaAndPower(otherAIWebToolsGPTs), // All other AI Web Tools (videos/images first)
-    ...sortByRatingAndTitle([...toolsWithMedia]),          // Third-party tools with media
-    ...sortByRatingAndTitle([...otherTools])               // Everything else
+    ...sortAIWebToolsByMediaAndPower(cannabisTools),       // 🌿 CCSBA Cannabis tools FIRST!
+    ...sortAIWebToolsByMediaAndPower(smallBusinessTools),  // 💼 Small business tools second!
+    ...sortAIWebToolsByMediaAndPower(soulMapGPTs),         // Soul Map GPT
+    ...sortAIWebToolsByMediaAndPower(priorityGPTs),        // AI Web Tools with media
+    ...sortAIWebToolsByMediaAndPower(otherAIWebToolsGPTs), // All other AI Web Tools
+    ...sortByRatingAndTitle(toolsWithMedia),               // Third-party tools with media
+    ...sortByRatingAndTitle(otherTools)                    // Everything else
   ];
   
-  console.log(`✅ FINAL ORDER - Top 10:`, finalResult.slice(0, 10).map(t => 
-    `${t.title} (${t.videoUrl ? 'VIDEO' : ''}${t.imageUrl ? ' IMAGE' : ''})`));
+  console.log(`✅ CCSBA MEMBER PRIORITY ORDER - Top 15:`, finalResult.slice(0, 15).map(t => t.title));
   
   return finalResult;
 };
 
-console.log('🔮 Soul Map GPT will reign supreme! AI Web Tools Prioritization system loaded - Soul Map GPT always first!');
+console.log('🌿 CCSBA Prioritization loaded - Cannabis & Small Business tools featured first for members!');
