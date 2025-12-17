@@ -31,7 +31,7 @@ const Logo = ({ compact = false }: { compact?: boolean }) => {
       <img 
         src={ccsbaLogo} 
         alt="CCSBA - CT Cannabis Small Business Alliance"
-        className={`${compact ? 'h-10 w-auto' : 'h-14 w-auto'} drop-shadow-lg brightness-110`}
+        className={`${compact ? 'h-14 w-auto' : 'h-20 w-auto'} drop-shadow-lg brightness-110`}
       />
       
       <div className="text-left flex-1">
