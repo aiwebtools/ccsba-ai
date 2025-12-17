@@ -6,6 +6,7 @@ import GlobalSearchBar from "./GlobalSearchBar";
 import { getCurrentToolCount } from "@/utils/toolCounter";
 import MeetingCountdown from "./MeetingCountdown";
 import ChatGPTPlusNotice from "./ChatGPTPlusNotice";
+import FeaturedCannabisGPT from "./FeaturedCannabisGPT";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -174,6 +175,9 @@ const HeroSection = () => {
         <div className="mt-8 max-w-2xl mx-auto">
           <MeetingCountdown />
         </div>
+
+        {/* Featured Cannabis GPT - CCSBA's #1 Tool */}
+        <FeaturedCannabisGPT />
 
         {/* Stats - updated with new verbiage */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
