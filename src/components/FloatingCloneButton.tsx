@@ -40,14 +40,14 @@ const FloatingCloneButton = () => {
       }`}
     >
       <a
-        href="https://lovable.dev/projects/3eeef7f3-d7d4-4c6a-bcc3-dd2f09b712ab?via=aiwebtools"
+        href="https://lovable.dev/projects/28822f40-e177-4840-8d1a-166c193e1a4b?via=aiwebtools"
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
           console.log('🌀 Clone Website Button clicked - triggering time warp');
-          createTimePortalEffect('https://lovable.dev/projects/3eeef7f3-d7d4-4c6a-bcc3-dd2f09b712ab?via=aiwebtools', 'Clone AI Web Tools');
+          createTimePortalEffect('https://lovable.dev/projects/28822f40-e177-4840-8d1a-166c193e1a4b?via=aiwebtools', 'Clone AI Web Tools');
         }}
         className="group bg-gradient-to-br from-green-500 via-lime-500 to-green-600 hover:from-green-400 hover:via-lime-400 hover:to-green-500 text-white w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex flex-col items-center justify-center relative overflow-hidden border-2 border-green-300/50"
         style={{ 
