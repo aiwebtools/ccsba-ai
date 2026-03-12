@@ -247,7 +247,7 @@ Best regards,
                   </h3>
                 </div>
                 <p className="text-lg md:text-xl leading-relaxed text-gray-200 mb-6">
-                  CCSBA extends our sincere gratitude to <button onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e)} className="text-cyan-400 hover:text-cyan-300 font-bold underline transition-colors">AI Web Tools LLC (AIWebTools.AI)</button> for their generous donation of this AI tools platform to our organization.
+                  CCSBA extends our sincere gratitude to <button onClick={(e) => handleExternalLink("https://aiwebtools.lovable.app/?via=aiwebtools", e)} className="text-cyan-400 hover:text-cyan-300 font-bold underline transition-colors">AI Web Tools LLC (AIWebTools.AI)</button> for their generous donation of this AI tools platform to our organization.
                 </p>
                 <p className="text-lg leading-relaxed text-gray-300 mb-6">
                   This incredible gift empowers our members with cutting-edge technology and resources that would otherwise be costly or inaccessible. AIWebTools.AI designed and built this entire platform from the ground up, then donated it freely to CCSBA to support Connecticut's cannabis community.
@@ -258,7 +258,7 @@ Best regards,
                   </p>
                 </div>
                 <Button 
-                  onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e as any)}
+                  onClick={(e) => handleExternalLink("https://aiwebtools.lovable.app/?via=aiwebtools", e as any)}
                   className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold"
                 >
                   <Globe className="w-4 h-4 mr-2" />
