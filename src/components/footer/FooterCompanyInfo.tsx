@@ -36,7 +36,7 @@ const FooterCompanyInfo = () => {
           <span>|</span>
           <span>Platform by</span>
           <button 
-            onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e)}
+            onClick={(e) => handleExternalLink("https://aiwebtools.lovable.app/?via=aiwebtools", e)}
             className="text-green-400 hover:text-green-300 transition-colors underline"
           >
             AIWebTools.AI

@@ -258,7 +258,7 @@ Best regards,
                   </p>
                 </div>
                 <Button 
-                  onClick={(e) => handleExternalLink("https://www.aiwebtools.ai", e as any)}
+                  onClick={(e) => handleExternalLink("https://aiwebtools.lovable.app/?via=aiwebtools", e as any)}
                   className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold"
                 >
                   <Globe className="w-4 h-4 mr-2" />

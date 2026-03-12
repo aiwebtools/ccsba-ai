@@ -141,7 +141,7 @@ export const advancedVideoTools: Tool[] = [
     description: "Create stunning music videos with AI. Upload your song and let AI generate a professional-looking video with various styles and effects.",
     emoji: "🎬",
     color: "from-red-500 to-pink-600",
-    directUrl: "https://ai-webtools.com/music-video-maker-ai-studio",
+    directUrl: "https://musicvideomakergpt.lovable.app/?via=aiwebtools",
     videoUrl: "https://www.youtube.com/watch?v=M0JmqvMa2rw",
     tags: ["music videos", "AI generation", "video effects", "content creation", "entertainment"],
     category: "Advanced Video Tools",
